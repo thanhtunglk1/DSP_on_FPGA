@@ -1,0 +1,44 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Jun 16, 2025 at 02:21:53 EDT
+xrun
+	-gui
+	+xm64bit
+	-sv
+	-f ../02_sim/flist.f
+		../00_src_wave/lfsr.sv
+		../00_src_wave/sine_gen.sv
+		../00_src_wave/single_port_RAM.sv
+		../01_tb/fir_tb.sv
+	-timescale 1ns/1ns
+	+ntb_random_seed=automatic
+	+access+rcw
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm fir_tb.sine_wave
+Created probe 1
+xcelium> run
+xmsim: *W,SHMOFU: $shm_open - file waves.shm already in use (SHM database).
+            File: ../01_tb/fir_tb.sv, line = 33, pos = 16
+           Scope: fir_tb
+            Time: 0 FS + 0
+
+xmsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
+            File: ../01_tb/fir_tb.sv, line = 34, pos = 17
+           Scope: fir_tb
+            Time: 0 FS + 0
+
+Simulation complete via $finish(1) at time 50020 NS + 0
+../01_tb/fir_tb.sv:47         $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Jun 16, 2025 at 02:24:40 EDT  (total: 00:02:47)

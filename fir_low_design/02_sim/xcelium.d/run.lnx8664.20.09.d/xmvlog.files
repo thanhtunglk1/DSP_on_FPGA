@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/admin/Mount/DSP_on_FPGA/fir_low_design/00_src_wave/lfsr.sv
+/home/admin/Mount/DSP_on_FPGA/fir_low_design/00_src_wave/sine_gen.sv
+/home/admin/Mount/DSP_on_FPGA/fir_low_design/00_src_wave/single_port_RAM.sv
+/home/admin/Mount/DSP_on_FPGA/fir_low_design/01_tb/fir_tb.sv
