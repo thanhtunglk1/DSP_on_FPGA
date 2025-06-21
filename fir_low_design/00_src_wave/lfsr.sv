@@ -22,10 +22,10 @@ module lfsr #(
 
     always_comb begin
         case(i_sel)
-            0: o_noise = p_noise;
-            1: o_noise = {'0, p_noise[11:0]};
-            2: o_noise = {'0, p_noise[15:0]};
-            3: o_noise = {'0, p_noise[17:0]};
+            3: o_noise = p_noise;
+            2: o_noise = {'0, p_noise[21:0]};
+            1: o_noise = {'0, p_noise[19:0]};
+            0: o_noise = {'0, p_noise[17:0]};
         endcase
     end
 

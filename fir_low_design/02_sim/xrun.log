@@ -1,13 +1,15 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Jun 16, 2025 at 02:21:53 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Jun 19, 2025 at 04:05:42 EDT
 xrun
-	-gui
 	+xm64bit
 	-sv
 	-f ../02_sim/flist.f
 		../00_src_wave/lfsr.sv
 		../00_src_wave/sine_gen.sv
+		../00_src_wave/noise_gen.sv
 		../00_src_wave/single_port_RAM.sv
+		../00_src/fir_sym_trans.sv
+		../00_src/fir_top.sv
 		../01_tb/fir_tb.sv
 	-timescale 1ns/1ns
 	+ntb_random_seed=automatic
@@ -16,29 +18,40 @@ xrun
    User defined plus("+") options:
 	+ntb_random_seed=automatic
 
+Recompiling... reason: file '../01_tb/fir_tb.sv' is newer than expected.
+	expected: Thu Jun 19 03:50:29 2025
+	actual:   Thu Jun 19 04:05:44 2025
+file: ../01_tb/fir_tb.sv
+	module worklib.fir_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		fir_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fir_tb:sv <0x4f9a1996>
+			streams:  17, words:  5975
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 8       7
+		Registers:              50      47
+		Scalar wires:           17       -
+		Vectored wires:         35       -
+		Always blocks:          14      13
+		Initial blocks:          5       4
+		Cont. assignments:      16      15
+		Pseudo assignments:     24      24
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.fir_tb:sv
+Loading snapshot worklib.fir_tb:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-
--------------------------------------
-Relinquished control to SimVision...
-xcelium> 
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm fir_tb.sine_wave
-Created probe 1
 xcelium> run
-xmsim: *W,SHMOFU: $shm_open - file waves.shm already in use (SHM database).
-            File: ../01_tb/fir_tb.sv, line = 33, pos = 16
-           Scope: fir_tb
-            Time: 0 FS + 0
-
-xmsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
-            File: ../01_tb/fir_tb.sv, line = 34, pos = 17
-           Scope: fir_tb
-            Time: 0 FS + 0
-
-Simulation complete via $finish(1) at time 50020 NS + 0
-../01_tb/fir_tb.sv:47         $finish;
-xcelium> ^C
+Simulation complete via $finish(1) at time 25000020 NS + 0
+../01_tb/fir_tb.sv:71         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Jun 16, 2025 at 02:24:40 EDT  (total: 00:02:47)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jun 19, 2025 at 04:05:46 EDT  (total: 00:00:04)
