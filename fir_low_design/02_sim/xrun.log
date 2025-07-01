@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Jun 19, 2025 at 04:05:42 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Jul 01, 2025 at 04:21:40 EDT
 xrun
 	+xm64bit
 	-sv
@@ -8,6 +8,7 @@ xrun
 		../00_src_wave/sine_gen.sv
 		../00_src_wave/noise_gen.sv
 		../00_src_wave/single_port_RAM.sv
+		../00_src_wave/wave_rec.sv
 		../00_src/fir_sym_trans.sv
 		../00_src/fir_top.sv
 		../01_tb/fir_tb.sv
@@ -18,9 +19,12 @@ xrun
    User defined plus("+") options:
 	+ntb_random_seed=automatic
 
-Recompiling... reason: file '../01_tb/fir_tb.sv' is newer than expected.
-	expected: Thu Jun 19 03:50:29 2025
-	actual:   Thu Jun 19 04:05:44 2025
+Recompiling... reason: file '../00_src_wave/noise_gen.sv' is newer than expected.
+	expected: Sun Jun 29 05:21:16 2025
+	actual:   Tue Jul  1 04:21:37 2025
+file: ../00_src_wave/noise_gen.sv
+	module worklib.noise_gen:sv
+		errors: 0, warnings: 0
 file: ../01_tb/fir_tb.sv
 	module worklib.fir_tb:sv
 		errors: 0, warnings: 0
@@ -29,29 +33,35 @@ file: ../01_tb/fir_tb.sv
 	Top level design units:
 		fir_tb
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+        .i_phase_step('d0), 
+                        |
+xmelab: *W,CUVMPW (../01_tb/fir_tb.sv,38|24): port sizes differ in port connection(32/16) for the instance(fir_tb) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.fir_tb:sv <0x4f9a1996>
-			streams:  17, words:  5975
+		worklib.noise_gen:sv <0x0fd92249>
+			streams:  13, words:  3902
+		worklib.fir_tb:sv <0x6242ff57>
+			streams:  17, words:  6305
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                 8       7
-		Registers:              50      47
-		Scalar wires:           17       -
-		Vectored wires:         35       -
-		Always blocks:          14      13
-		Initial blocks:          5       4
-		Cont. assignments:      16      15
-		Pseudo assignments:     24      24
+		Modules:                12       9
+		Registers:              60      52
+		Scalar wires:           23       -
+		Vectored wires:         43       -
+		Always blocks:          18      15
+		Initial blocks:          6       4
+		Final blocks:            2       1
+		Cont. assignments:      20      17
+		Pseudo assignments:     27      27
 		Simulation timescale:  1ns
 	Writing initial simulation snapshot: worklib.fir_tb:sv
 Loading snapshot worklib.fir_tb:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
-Simulation complete via $finish(1) at time 25000020 NS + 0
-../01_tb/fir_tb.sv:71         $finish;
+Simulation complete via $finish(1) at time 50000020 NS + 0
+../01_tb/fir_tb.sv:95         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Jun 19, 2025 at 04:05:46 EDT  (total: 00:00:04)
+TOOL:	xrun(64)	20.09-s001: Exiting on Jul 01, 2025 at 04:21:42 EDT  (total: 00:00:02)

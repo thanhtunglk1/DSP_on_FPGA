@@ -45,7 +45,7 @@ module noise_gen #(
     ) sine_RAM (
         .i_clk(i_clk),
         .i_wren(1'b0),
-        .i_addr(p_addr),
+        .i_addr(p_addr << 2),
 	    .i_st_data('0),
 	    .o_ld_data(sine_wave)
     );

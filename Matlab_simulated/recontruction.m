@@ -1,254 +1,207 @@
-% Khôi ph?c tín hi?u analog t? m?u l??ng t? 24-bit signed
-% File: E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/04_fir_cof/sine_wave.txt
+% MATLAB Code for analyzing 24-bit hex audio data
+% Sampling frequency: 48kHz, 4096 samples
 
-clear; clc; close all;
+clear all; close all; clc;
 
-% ???ng d?n file
-file_path = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/04_fir_cof/sine_wave.txt';
+% Basic parameters
+fs = 47985;           % Sampling frequency (Hz)
+N  = 4096;            % Number of samples
+T  = 1/fs;            % Sampling period
+t  = (0:N-1) * T;     % Time vector
 
-% Thông s? h? th?ng
-fs = 48000;         % T?n s? l?y m?u 48kHz
-bit_depth = 24;     % ?? sâu bit
-N = 1024;           % S? m?u
-T = 1/fs;           % Chu k? l?y m?u
+% Read data from file 1
+filename1 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_noise.txt';  % Change to your file name
+filename2 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_result.txt';  % Change to your file name
 
-fprintf('=== B?T ??U QUÁ TRÌNH KHÔI PH?C TÍN HI?U ===\n');
-fprintf('File ??u vào: %s\n', file_path);
-
-%% B??C 1: ??C D? LI?U HEXADECIMAL T? FILE
+% Read data from both files
 try
-    % Ki?m tra xem file có t?n t?i không
-    if ~exist(file_path, 'file')
-        error('File không t?n t?i: %s', file_path);
+    % Read file 1
+    fid1 = fopen(filename1, 'r');
+    if fid1 == -1
+        error('Cannot open file: %s', filename1);
     end
+    hex_data1 = textscan(fid1, '%s');
+    fclose(fid1);
     
-    % ??c d? li?u hexadecimal t? file txt
-    fid = fopen(file_path, 'r');
-    if fid == -1
-        error('Không th? m? file: %s', file_path);
+    % Read file 2
+    fid2 = fopen(filename2, 'r');
+    if fid2 == -1
+        error('Cannot open file: %s', filename2);
     end
+    hex_data2 = textscan(fid2, '%s');
+    fclose(fid2);
     
-    % ??c t?ng dòng và chuy?n ??i t? hex sang decimal
-    hex_data = {};
-    line_count = 0;
-    while ~feof(fid)
-        line = fgetl(fid);
-        if ischar(line) && ~isempty(strtrim(line))
-            line_count = line_count + 1;
-            hex_data{line_count} = strtrim(line);
-        end
-    end
-    fclose(fid);
+    % Process data from file 1
+    hex_strings1 = hex_data1{1};
+    data1 = zeros(length(hex_strings1), 1);
     
-    fprintf('??c ???c %d dòng d? li?u hex t? file\n', line_count);
-    
-    % Chuy?n ??i t? hex sang decimal
-    samples = zeros(line_count, 1);
-    for i = 1:line_count
-        hex_str = hex_data{i};
-        % Chuy?n ??i hex sang decimal (unsigned)
-        unsigned_val = hex2dec(hex_str);
+    for i = 1:length(hex_strings1)
+        hex_str = hex_strings1{i};
         
-        % Chuy?n ??i t? unsigned sang signed 24-bit
-        if unsigned_val >= 2^23
-            % N?u bit MSB = 1, ?ây là s? âm trong 2's complement
-            samples(i) = unsigned_val - 2^24;
-        else
-            % S? d??ng
-            samples(i) = unsigned_val;
+        % Remove '0x' prefix if present
+        if length(hex_str) > 2 && strcmp(hex_str(1:2), '0x')
+            hex_str = hex_str(3:end);
+        elseif length(hex_str) > 2 && strcmp(hex_str(1:2), '0X')
+            hex_str = hex_str(3:end);
+        end
+        
+        % Convert hex to 24-bit integer
+        decimal_val = hex2dec(hex_str);
+        
+        % Handle 24-bit signed number (two's complement)
+        if decimal_val >= 2^23
+            decimal_val = decimal_val - 2^24;
+        end
+        
+        % Normalize to [-1, 1]
+        data1(i) = decimal_val / (2^23 - 1);
+    end
+    
+    % Process data from file 2
+    hex_strings2 = hex_data2{1};
+    data2 = zeros(length(hex_strings2), 1);
+    
+    for i = 1:length(hex_strings2)
+        hex_str = hex_strings2{i};
+        
+        % Remove '0x' prefix if present
+        if length(hex_str) > 2 && strcmp(hex_str(1:2), '0x')
+            hex_str = hex_str(3:end);
+        elseif length(hex_str) > 2 && strcmp(hex_str(1:2), '0X')
+            hex_str = hex_str(3:end);
+        end
+        
+        % Convert hex to 24-bit integer
+        decimal_val = hex2dec(hex_str);
+        
+        % Handle 24-bit signed number (two's complement)
+        if decimal_val >= 2^23
+            decimal_val = decimal_val - 2^24;
+        end
+        
+        % Normalize to [-1, 1]
+        data2(i) = decimal_val / (2^23 - 1);
+    end
+    
+    % Ensure exactly 2048 samples
+    if length(data1) ~= N
+        warning('File 1 has %d samples instead of %d samples', length(data1), N);
+        data1 = data1(1:min(length(data1), N));
+        if length(data1) < N
+            data1 = [data1; zeros(N - length(data1), 1)];
         end
     end
     
-    fprintf('?ã chuy?n ??i thành công %d m?u t? hex sang decimal\n', length(samples));
-    fprintf('Ví d? chuy?n ??i:\n');
-    for i = 1:min(5, length(samples))
-        fprintf('  %s (hex) -> %d (dec)\n', hex_data{i}, samples(i));
-    end
-    
-    % Ki?m tra s? l??ng m?u
-    if length(samples) ~= N
-        fprintf('C?nh báo: S? m?u th?c t? (%d) khác v?i mong ??i (%d)\n', length(samples), N);
-        N = length(samples);  % C?p nh?t s? m?u th?c t?
+    if length(data2) ~= N
+        warning('File 2 has %d samples instead of %d samples', length(data2), N);
+        data2 = data2(1:min(length(data2), N));
+        if length(data2) < N
+            data2 = [data2; zeros(N - length(data2), 1)];
+        end
     end
     
 catch ME
-    error('Không th? ??c file: %s\nL?i: %s', file_path, ME.message);
+    fprintf('Error reading file: %s\n', ME.message);
+    return;
 end
 
-%% B??C 2: CHUY?N ??I VÀ CHU?N HÓA D? LI?U
-% Ph?m vi 24-bit signed: -2^23 ??n 2^23-1
-max_value = 2^(bit_depth-1) - 1;  % 8388607
-min_value = -2^(bit_depth-1);     % -8388608
+% Update time vector according to actual length
+t1 = (0:length(data1)-1) * T;
+t2 = (0:length(data2)-1) * T;
 
-% Ki?m tra gi?i h?n và ép ki?u
-samples = double(samples);
-samples = max(min(samples, max_value), min_value);
+% Calculate FFT
+fft1 = fft(data1);
+fft2 = fft(data2);
 
-% Chu?n hóa v? kho?ng [-1, 1]
-normalized_samples = samples / max_value;
+% Calculate magnitude spectrum (take only first half due to symmetry)
+mag1 = abs(fft1(1:floor(length(fft1)/2)+1));
+mag2 = abs(fft2(1:floor(length(fft2)/2)+1));
 
-fprintf('Ph?m vi giá tr? g?c (hex->dec): %.0f ??n %.0f\n', min(samples), max(samples));
-fprintf('Ph?m vi giá tr? chu?n hóa: %.6f ??n %.6f\n', min(normalized_samples), max(normalized_samples));
+% Frequency vector
+f1 = (0:length(mag1)-1) * fs / length(data1);
+f2 = (0:length(mag2)-1) * fs / length(data2);
 
-%% B??C 3: T?O TR?C TH?I GIAN
-% Th?i gian c?a các m?u r?i r?c
-t_samples = (0:N-1)' * T;
+% Convert to dB
+mag1_dB = 20 * log10(mag1 + eps);  % eps to avoid log(0)
+mag2_dB = 20 * log10(mag2 + eps);
 
-% T?o tr?c th?i gian liên t?c v?i ?? phân gi?i cao
-oversampling_factor = 8;  % T?ng ?? phân gi?i
-fs_new = fs * oversampling_factor;
-t_continuous = (0:1/fs_new:(N-1)*T)';
+% Plot graphs
+figure('Position', [100, 100, 1200, 800]);
 
-fprintf('Th?i gian tín hi?u: %.4f ms\n', (N-1)*T*1000);
-fprintf('T?n s? l?y m?u m?i: %d Hz\n', fs_new);
-
-%% B??C 4: KHÔI PH?C TÍN HI?U ANALOG
-% S? d?ng ph??ng pháp n?i suy cubic spline cho ?? chính xác cao
-reconstructed_signal = interp1(t_samples, normalized_samples, t_continuous, 'spline');
-
-% Lo?i b? các giá tr? NaN n?u có
-reconstructed_signal(isnan(reconstructed_signal)) = 0;
-
-%% B??C 5: L?C CH?NG NHI?U (ANTI-ALIASING)
-% Thi?t k? b? l?c thông th?p Butterworth
-cutoff_freq = fs/2 * 0.45;  % T?n s? c?t = 45% c?a t?n s? Nyquist g?c
-normalized_cutoff = cutoff_freq / (fs_new/2);
-
-if normalized_cutoff < 1
-    [b, a] = butter(4, normalized_cutoff, 'low');
-    reconstructed_signal = filtfilt(b, a, reconstructed_signal);
-    fprintf('?ã áp d?ng b? l?c anti-aliasing t?i %.1f Hz\n', cutoff_freq);
-end
-
-%% B??C 6: HI?N TH? K?T QU?
-fprintf('\n=== THÔNG TIN K?T QU? ===\n');
-fprintf('S? ?i?m tín hi?u khôi ph?c: %d\n', length(reconstructed_signal));
-fprintf('T? l? oversampling: %dx\n', oversampling_factor);
-fprintf('?? phân gi?i th?i gian: %.6f ms\n', 1/fs_new*1000);
-
-%% B??C 7: V? BI?U ??
-figure('Position', [100, 100, 1400, 900], 'Name', 'Khôi ph?c tín hi?u Analog t? 24-bit Digital');
-
-% Subplot 1: Tín hi?u s? g?c
-subplot(2,2,1);
-stem(t_samples*1000, normalized_samples, 'b', 'LineWidth', 1.2, 'MarkerSize', 4);
+% Time domain plots
+subplot(2, 2, 1);
+plot(t1 * 1000, data1, 'b-', 'LineWidth', 1);
 grid on;
-title('Tín hi?u s? g?c (24-bit, 48kHz)', 'FontSize', 11, 'FontWeight', 'bold');
-xlabel('Th?i gian (ms)');
-ylabel('Biên ??');
-xlim([0, max(t_samples)*1000]);
+xlabel('Time (ms)');
+ylabel('Amplitude');
+title('File 1 - Time Domain');
+xlim([0, max(t1) * 1000]);
 
-% Subplot 2: Tín hi?u analog khôi ph?c (toàn b?)
-subplot(2,2,2);
-plot(t_continuous*1000, reconstructed_signal, 'r', 'LineWidth', 1.5);
-hold on;
-stem(t_samples*1000, normalized_samples, 'b', 'MarkerSize', 3);
+subplot(2, 2, 2);
+plot(t2 * 1000, data2, 'r-', 'LineWidth', 1);
 grid on;
-title('Tín hi?u Analog khôi ph?c (Toàn b?)', 'FontSize', 11, 'FontWeight', 'bold');
-xlabel('Th?i gian (ms)');
-ylabel('Biên ??');
-legend('Analog khôi ph?c', 'M?u g?c', 'Location', 'best');
-xlim([0, max(t_continuous)*1000]);
+xlabel('Time (ms)');
+ylabel('Amplitude');
+title('File 2 - Time Domain');
+xlim([0, max(t2) * 1000]);
 
-% Subplot 3: Chi ti?t m?t ph?n nh?
-subplot(2,2,3);
-% Hi?n th? 100 m?u ??u tiên
-end_idx = min(100, N);
-t_zoom = t_samples(1:end_idx);
-samples_zoom = normalized_samples(1:end_idx);
-mask = t_continuous <= t_zoom(end);
-t_cont_zoom = t_continuous(mask);
-recon_zoom = reconstructed_signal(mask);
-
-plot(t_cont_zoom*1000, recon_zoom, 'r', 'LineWidth', 2);
-hold on;
-stem(t_zoom*1000, samples_zoom, 'b', 'LineWidth', 1.5, 'MarkerSize', 6);
+% Frequency domain plots
+subplot(2, 2, 3);
+semilogx(f1, mag1_dB, 'b-', 'LineWidth', 1);
 grid on;
-title(sprintf('Chi ti?t %d m?u ??u', end_idx), 'FontSize', 11, 'FontWeight', 'bold');
-xlabel('Th?i gian (ms)');
-ylabel('Biên ??');
-legend('Analog khôi ph?c', 'M?u g?c', 'Location', 'best');
-
-% Subplot 4: Ph? t?n s?
-subplot(2,2,4);
-% FFT c?a tín hi?u g?c
-N_fft = 2^nextpow2(N);
-f_original = (0:N_fft-1) * fs / N_fft;
-X_original = fft(normalized_samples, N_fft);
-
-% FFT c?a tín hi?u khôi ph?c (l?y m?u l?i v? fs ?? so sánh)
-recon_downsampled = reconstructed_signal(1:oversampling_factor:end);
-if length(recon_downsampled) > N
-    recon_downsampled = recon_downsampled(1:N);
-end
-X_recon = fft(recon_downsampled, N_fft);
-
-% V? ph? magnitude
-semilogx(f_original(1:N_fft/2), 20*log10(abs(X_original(1:N_fft/2)) + eps), 'b', 'LineWidth', 1.5);
-hold on;
-semilogx(f_original(1:N_fft/2), 20*log10(abs(X_recon(1:N_fft/2)) + eps), 'r--', 'LineWidth', 1.5);
-grid on;
-title('So sánh ph? t?n s?', 'FontSize', 11, 'FontWeight', 'bold');
-xlabel('T?n s? (Hz)');
+xlabel('Frequency (Hz)');
 ylabel('Magnitude (dB)');
-legend('Tín hi?u g?c', 'Tín hi?u khôi ph?c', 'Location', 'best');
-xlim([10, fs/2]);
+title('File 1 - Frequency Spectrum');
+xlim([1, fs/2]);
 
-%% B??C 8: L?U K?T QU?
-% T?o tên file output
-[filepath, filename, ~] = fileparts(file_path);
-output_path = fullfile(filepath, [filename '_reconstructed']);
+subplot(2, 2, 4);
+semilogx(f2, mag2_dB, 'r-', 'LineWidth', 1);
+grid on;
+xlabel('Frequency (Hz)');
+ylabel('Magnitude (dB)');
+title('File 2 - Frequency Spectrum');
+xlim([1, fs/2]);
 
-% L?u workspace
-save([output_path '.mat'], 't_continuous', 'reconstructed_signal', ...
-     't_samples', 'normalized_samples', 'samples', 'fs', 'fs_new');
+% Add common title
+%sgtitle('24-bit Audio Data Analysis (48kHz)', 'FontSize', 14, 'FontWeight', 'bold');
 
-% L?u tín hi?u analog sang file CSV
-output_csv = [output_path '_analog.csv'];
-writematrix([t_continuous*1000, reconstructed_signal], output_csv);
+% Direct comparison (optional)
+figure('Position', [150, 150, 1200, 600]);
 
-% L?u hình ?nh
-saveas(gcf, [output_path '_plot.png']);
+subplot(1, 2, 1);
+plot(t1 * 1000, data1, 'b-', 'LineWidth', 1);
+hold on;
+plot(t2 * 1000, data2, 'r-', 'LineWidth', 1);
+grid on;
+xlabel('Time (ms)');
+ylabel('Amplitude');
+title('Time Domain Comparison');
+legend('File 1', 'File 2', 'Location', 'best');
 
-fprintf('\n=== ?Ã L?U K?T QU? ===\n');
-fprintf('File MAT: %s.mat\n', output_path);
-fprintf('File CSV: %s\n', output_csv);
-fprintf('File ?nh: %s_plot.png\n', output_path);
+subplot(1, 2, 2);
+semilogx(f1, mag1_dB, 'b-', 'LineWidth', 1);
+hold on;
+semilogx(f2, mag2_dB, 'r-', 'LineWidth', 1);
+grid on;
+xlabel('Frequency (Hz)');
+ylabel('Magnitude (dB)');
+title('Frequency Spectrum Comparison');
+legend('File 1', 'File 2', 'Location', 'best');
+xlim([1, fs/2]);
 
-%% B??C 9: TH?NG KÊ CHI TI?T
-fprintf('\n=== TH?NG KÊ CHI TI?T ===\n');
-fprintf('RMS tín hi?u g?c: %.6f\n', rms(normalized_samples));
-fprintf('RMS tín hi?u khôi ph?c: %.6f\n', rms(reconstructed_signal));
+% Display basic information
+fprintf('\n=== DATA INFORMATION ===\n');
+fprintf('Sampling frequency: %d Hz\n', fs);
+fprintf('Number of samples File 1: %d\n', length(data1));
+fprintf('Number of samples File 2: %d\n', length(data2));
+fprintf('Recording time File 1: %.2f ms\n', length(data1) * T * 1000);
+fprintf('Recording time File 2: %.2f ms\n', length(data2) * T * 1000);
+fprintf('Frequency resolution: %.2f Hz\n', fs / N);
 
-% Tính SNR ??c l??ng
-noise_floor = std(diff(normalized_samples));
-signal_power = var(normalized_samples);
-snr_estimate = 10*log10(signal_power / noise_floor^2);
-fprintf('SNR ??c l??ng: %.2f dB\n', snr_estimate);
+fprintf('\n=== STATISTICAL PARAMETERS ===\n');
+fprintf('File 1 - Min: %.4f, Max: %.4f, RMS: %.4f\n', min(data1), max(data1), rms(data1));
+fprintf('File 2 - Min: %.4f, Max: %.4f, RMS: %.4f\n', min(data2), max(data2), rms(data2));
 
-% Tính THD n?u là sóng sine
-try
-    % Tìm t?n s? c? b?n
-    [pxx, f] = periodogram(normalized_samples, [], [], fs);
-    [~, idx] = max(pxx(f > 10 & f < fs/2));  % B? qua DC
-    f_fund = f(f > 10 & f < fs/2);
-    fundamental_freq = f_fund(idx);
-    fprintf('T?n s? c? b?n phát hi?n: %.2f Hz\n', fundamental_freq);
-catch
-    fprintf('Không th? xác ??nh t?n s? c? b?n\n');
-end
-
-fprintf('\n=== HOÀN THÀNH QUÁ TRÌNH KHÔI PH?C ===\n');
-
-% Hi?n th? m?t s? giá tr? m?u ?? ki?m tra
-fprintf('\n=== M?T S? GIÁ TR? M?U ===\n');
-fprintf('5 m?u ??u (hex): %s\n', strjoin(hex_data(1:min(5,end)), ', '));
-fprintf('5 m?u ??u (dec): ');
-fprintf('%.0f ', samples(1:min(5,end)));
-fprintf('\n');
-fprintf('5 m?u chu?n hóa: ');
-fprintf('%.6f ', normalized_samples(1:min(5,end)));
-fprintf('\n');
-fprintf('5 giá tr? khôi ph?c: ');
-fprintf('%.6f ', reconstructed_signal(1:min(5,end)));
-fprintf('\n');
+% Save results (optional)
+%save('audio_analysis_results.mat', 'data1', 'data2', 'fft1', 'fft2', 'fs', 't1', 't2', 'f1', 'f2');
+%fprintf('\nResults saved to file: audio_analysis_results.mat\n');

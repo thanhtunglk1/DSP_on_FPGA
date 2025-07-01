@@ -25,3 +25,6 @@ xlabel('Th?i gian (s)');
 ylabel('Biên ??');
 title('So sánh tr??c và sau l?c FIR');
 grid on;
+
+%filename1 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_noise.txt';  % Thay ??i tên file c?a b?n
+%filename2 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_result.txt';  % Thay ??i tên file c?a b?n
