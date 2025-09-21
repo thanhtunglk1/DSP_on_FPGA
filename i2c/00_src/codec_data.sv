@@ -5,7 +5,7 @@ module codec_data(
     input  logic [23:0] i_p2s_in     ,  // data need DAC
     output logic [23:0] o_s2p_out    ,  // only left channel
     
-    output logic        o_bclk       ,  // 2.4MHz ( 40:60 - 0:1)
+    output logic        o_bclk       ,  // 240kHz ( 40:60 - 0:1)
     output logic        o_daclrck    ,  //  48kHz ( 50:50 - 0:1) 
     output logic        o_adclrck    ,  //  48kHz ( 50:50 - 0:1)   
     output logic        o_sample_tick,  //  48kHz (249: 1 - 0:1) 
