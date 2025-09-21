@@ -5,12 +5,15 @@ clear all; close all; clc;
 
 % Basic parameters
 fs = 47985;           % Sampling frequency (Hz)
-N  = 4096;            % Number of samples
+N  = 1024;            % Number of samples
+%N  = 2048;            % Number of samples
+%N  = 4096;            % Number of samples
 T  = 1/fs;            % Sampling period
 t  = (0:N-1) * T;     % Time vector
 
 % Read data from file 1
 filename1 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_noise.txt';  % Change to your file name
+%filename1 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/04_fir_cof/ecg_wave_0.1.txt';  % Change to your file name
 filename2 = 'E:/virtual_machine/Mount/DSP_on_FPGA/fir_low_design/01_tb/wave_result.txt';  % Change to your file name
 
 % Read data from both files

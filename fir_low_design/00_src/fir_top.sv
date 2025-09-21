@@ -23,7 +23,7 @@ module fir_top#(
     ) lowpass_filter_fir (
         .i_clk(i_clk)           ,
         .i_rst_n(i_rst_n)       ,
-        .i_clk_fir(i_clk_fir)   ,
+        //.i_clk_fir(i_clk_fir)   ,
         .i_data(i_samp_data)    ,
         .o_data(noise_filtering_data) 
     );

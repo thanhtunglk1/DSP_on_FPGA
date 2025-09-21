@@ -7,7 +7,7 @@ module fir_sym_trans #( //FIR symmetric - transposed form
 )(
     input  logic i_clk                              ,
     input  logic i_rst_n                            ,
-    input  logic i_clk_fir                          ,
+    //input  logic i_clk_fir                          ,
 
     input  logic signed [DATA_WIDTH - 1:0] i_data   ,
     output logic signed [DATA_WIDTH - 1:0] o_data
@@ -29,7 +29,8 @@ module fir_sym_trans #( //FIR symmetric - transposed form
     always_ff @(posedge i_clk, negedge i_rst_n) begin
         if(~i_rst_n) for(int i = 0; i <= HALF_ORDER; i++) i_data_delay[i] <= '0;
 
-        else if(i_clk_fir) for(int i = 0; i <= HALF_ORDER; i++) i_data_delay[i] <= i_data;
+        //else if(i_clk_fir) for(int i = 0; i <= HALF_ORDER; i++) i_data_delay[i] <= i_data;
+        else for(int i = 0; i <= HALF_ORDER; i++) i_data_delay[i] <= i_data;    
     end
 
 
@@ -42,7 +43,8 @@ module fir_sym_trans #( //FIR symmetric - transposed form
     always_ff @(posedge i_clk, negedge i_rst_n) begin
         if(~i_rst_n) multi_delay <= '0;
 
-        else if(i_clk_fir) multi_delay <= multi_result;
+        //else if(i_clk_fir) multi_delay <= multi_result;
+        else multi_delay <= multi_result;
     end
 
     //DELAY FOR ADD
@@ -51,7 +53,8 @@ module fir_sym_trans #( //FIR symmetric - transposed form
             for(int i = 0; i < ORDER; i++) sum_delay[i] <= '0;
         end
         
-        else if(i_clk_fir) begin
+        //else if(i_clk_fir) begin
+        else begin
             sum_delay[0] <= multi_delay[0];
 
             for(int i = 1; i <= ORDER - 1; i++) begin

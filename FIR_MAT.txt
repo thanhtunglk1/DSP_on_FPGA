@@ -1,0 +1,21 @@
+clc;
+c=0;
+x=[1 1 2 1 2 2 1 1];
+h=[1 2 -1 1 0 0 0 0];
+n=length(x);
+m=length(h);
+k=m+n-1;
+yn1=zeros(1,k);
+t=m+1:k;
+w=zeros(1,n);
+xn=[x zeros(size(t))];
+for i=1:k
+w(1,1)=xn(1,i);
+for N=1:nc=c+h(1,N)*w(1,N);
+end
+yn1(1,i)=c;
+c=0;
+for e=n:-1:2w(1,e)=w(1,e-1);
+end
+end
+yn2=conv(x,h);

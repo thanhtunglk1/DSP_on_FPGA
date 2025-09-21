@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Jul 01, 2025 at 04:21:40 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Sep 21, 2025 at 04:58:30 EDT
 xrun
 	+xm64bit
 	-sv
@@ -11,7 +11,9 @@ xrun
 		../00_src_wave/wave_rec.sv
 		../00_src/fir_sym_trans.sv
 		../00_src/fir_top.sv
-		../01_tb/fir_tb.sv
+		../00_src_wave/codec_data.sv
+		../00_src_wave/sin_gen_test.sv
+		../01_tb/dac_tb.sv
 	-timescale 1ns/1ns
 	+ntb_random_seed=automatic
 	+access+rcw
@@ -19,49 +21,52 @@ xrun
    User defined plus("+") options:
 	+ntb_random_seed=automatic
 
-Recompiling... reason: file '../00_src_wave/noise_gen.sv' is newer than expected.
-	expected: Sun Jun 29 05:21:16 2025
-	actual:   Tue Jul  1 04:21:37 2025
-file: ../00_src_wave/noise_gen.sv
-	module worklib.noise_gen:sv
-		errors: 0, warnings: 0
-file: ../01_tb/fir_tb.sv
-	module worklib.fir_tb:sv
+Recompiling... reason: file '../00_src_wave/codec_data.sv' is newer than expected.
+	expected: Sun Sep 21 04:30:56 2025
+	actual:   Sun Sep 21 04:58:05 2025
+file: ../00_src_wave/codec_data.sv
+	module worklib.codec_data:sv
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		fir_tb
+		sine_gen
+		wave_rec
+		fir_top
+		dac_tb
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
         .i_phase_step('d0), 
                         |
-xmelab: *W,CUVMPW (../01_tb/fir_tb.sv,38|24): port sizes differ in port connection(32/16) for the instance(fir_tb) .
+xmelab: *W,CUVMPW (../01_tb/dac_tb.sv,42|24): port sizes differ in port connection(32/16) for the instance(dac_tb) .
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.noise_gen:sv <0x0fd92249>
-			streams:  13, words:  3902
-		worklib.fir_tb:sv <0x6242ff57>
-			streams:  17, words:  6305
+		worklib.codec_data:sv <0x76edc587>
+			streams:  11, words:  7965
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                12       9
-		Registers:              60      52
-		Scalar wires:           23       -
-		Vectored wires:         43       -
-		Always blocks:          18      15
-		Initial blocks:          6       4
-		Final blocks:            2       1
-		Cont. assignments:      20      17
-		Pseudo assignments:     27      27
+		Modules:                13      11
+		Registers:              78      72
+		Scalar wires:           36       -
+		Vectored wires:         45       -
+		Always blocks:          22      20
+		Initial blocks:          7       5
+		Final blocks:            1       1
+		Cont. assignments:      24      22
+		Pseudo assignments:     30      30
 		Simulation timescale:  1ns
-	Writing initial simulation snapshot: worklib.fir_tb:sv
-Loading snapshot worklib.fir_tb:sv .................... Done
+	Writing initial simulation snapshot: worklib.sine_gen:sv
+Loading snapshot worklib.sine_gen:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
-Simulation complete via $finish(1) at time 50000020 NS + 0
-../01_tb/fir_tb.sv:95         $finish;
+xmsim: *W,RMEMNOF: $readmem error: open failed on file "../04_fir_cof/sine_wave.txt".
+            File: ../00_src_wave/single_port_RAM.sv, line = 16, pos = 34
+           Scope: sine_gen.sine_RAM
+            Time: 0 FS + 0
+
+Simulation complete via $finish(1) at time 500060 NS + 0
+../01_tb/dac_tb.sv:120         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Jul 01, 2025 at 04:21:42 EDT  (total: 00:00:02)
+TOOL:	xrun(64)	20.09-s001: Exiting on Sep 21, 2025 at 04:58:32 EDT  (total: 00:00:02)

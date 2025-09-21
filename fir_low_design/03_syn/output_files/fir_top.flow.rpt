@@ -1,5 +1,5 @@
 Flow report for fir_top
-Sun Jun 29 17:56:51 2025
+Fri Aug  1 10:23:34 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -41,25 +41,25 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sun Jun 29 17:56:51 2025           ;
+; Flow Status                     ; Successful - Fri Aug  1 10:23:34 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; fir_top                                         ;
 ; Top-level Entity Name           ; fir_top                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 1,010 / 41,910 ( 2 % )                          ;
-; Total registers                 ; 1999                                            ;
-; Total pins                      ; 75 / 499 ( 15 % )                               ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 3037                                            ;
+; Total pins                      ; 75                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                           ;
-; Total DSP Blocks                ; 27 / 112 ( 24 % )                               ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                   ;
-; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                   ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 27                                              ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
 +---------------------------------+-------------------------------------------------+
 
 
@@ -68,7 +68,7 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/29/2025 17:51:54 ;
+; Start date & time ; 08/01/2025 10:23:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fir_top             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ on the Quartus Prime software download page.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 345052807176.175119431414744           ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 207314318672211.175401860610848        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -103,12 +103,8 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4929 MB             ; 00:00:09                           ;
-; Fitter               ; 00:04:23     ; 1.1                     ; 7375 MB             ; 00:04:15                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4892 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:10     ; 2.6                     ; 5311 MB             ; 00:00:15                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4780 MB             ; 00:00:01                           ;
-; Total                ; 00:04:51     ; --                      ; --                  ; 00:04:47                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4942 MB             ; 00:00:16                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,10 +114,6 @@ on the Quartus Prime software download page.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; LAPTOP-9RK2J1TD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-9RK2J1TD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-9RK2J1TD  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-9RK2J1TD  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-9RK2J1TD  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -129,10 +121,6 @@ on the Quartus Prime software download page.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off fir_top -c fir_top
-quartus_fit --read_settings_files=off --write_settings_files=off fir_top -c fir_top
-quartus_asm --read_settings_files=off --write_settings_files=off fir_top -c fir_top
-quartus_sta fir_top -c fir_top
-quartus_eda --read_settings_files=off --write_settings_files=off fir_top -c fir_top
 
 
 
