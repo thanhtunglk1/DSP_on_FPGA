@@ -35,7 +35,7 @@ module codec_data(
     logic samp_detect;
 
     always_ff @(posedge i_clk, negedge i_rst_n) begin
-        if(~i_rst_n)          reg_data_dac <= '0      ;
+        if(~i_rst_n)         reg_data_dac <= '0      ;
         else if(samp_detect) reg_data_dac <= i_p2s_in;
     end
 
@@ -52,7 +52,7 @@ module codec_data(
         end
     end
 
-    logic count_done;
+    logic  count_done;
     assign count_done = (reg_index == '0);
 
     always_comb begin
