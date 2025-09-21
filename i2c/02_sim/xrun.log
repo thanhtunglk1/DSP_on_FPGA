@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Sep 21, 2025 at 00:30:11 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Sep 21, 2025 at 16:28:33 EDT
 xrun
 	+xm64bit
 	-sv
@@ -15,8 +15,8 @@ xrun
 	+ntb_random_seed=automatic
 
 Recompiling... reason: file '../00_src/config_codec.sv' is newer than expected.
-	expected: Fri Sep 19 10:55:18 2025
-	actual:   Sat Sep 20 23:10:36 2025
+	expected: Sat Sep 20 23:10:36 2025
+	actual:   Sun Sep 21 16:28:29 2025
 file: ../00_src/config_codec.sv
 	module worklib.config_codec:sv
 		errors: 0, warnings: 0
@@ -27,21 +27,23 @@ file: ../00_src/config_codec.sv
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.config_codec:sv <0x1ad3f242>
-			streams:  24, words: 10205
+		worklib.i2c_trans:sv <0x5aea5d6b>
+			streams:  11, words:  6479
+		worklib.config_codec:sv <0x4cf4947e>
+			streams:  29, words: 11649
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
 		Modules:                 3       3
-		Registers:              26      26
-		Scalar wires:           17       -
-		Vectored wires:         14       -
-		Always blocks:          10      10
+		Registers:              29      29
+		Scalar wires:           19       -
+		Vectored wires:         15       -
+		Always blocks:          11      11
 		Initial blocks:          2       2
 		Parallel blocks:         1       1
-		Cont. assignments:      17      17
-		Pseudo assignments:     10      10
+		Cont. assignments:      19      19
+		Pseudo assignments:     11      11
 		Simulation timescale:  1ns
 	Writing initial simulation snapshot: worklib.config_tb:sv
 Loading snapshot worklib.config_tb:sv .................... Done
@@ -49,7 +51,7 @@ xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
 xcelium> run
 [TESTBENCH DONE]
-Simulation complete via $finish(1) at time 23945 NS + 0
+Simulation complete via $finish(1) at time 135385 NS + 0
 ../01_tb/config_tb.sv:46         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Sep 21, 2025 at 00:30:14 EDT  (total: 00:00:03)
+TOOL:	xrun(64)	20.09-s001: Exiting on Sep 21, 2025 at 16:28:35 EDT  (total: 00:00:02)

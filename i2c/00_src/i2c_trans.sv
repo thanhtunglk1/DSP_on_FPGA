@@ -1,7 +1,7 @@
 module i2c_trans (
     input  logic               i_clk       ,
     input  logic               i_rst_n     ,
-    //input  logic               i_div_clk   ,
+    input  logic               i_div_clk   ,
 
     input  logic               i_start     ,
     input  logic [        6:0] i_addr      ,
@@ -30,8 +30,8 @@ module i2c_trans (
 
     always_ff @(posedge i_clk, negedge i_rst_n) begin
         if(~i_rst_n)       reg_state <= IDLE      ;
-        //else if(i_div_clk) reg_state <= next_state;
-        else               reg_state <= next_state;
+        else if(i_div_clk) reg_state <= next_state;
+        //else               reg_state <= next_state;
     end
 
     logic [26:0] data;
@@ -44,9 +44,9 @@ module i2c_trans (
     logic [4:0] reg_counter, next_counter;
     
     always_ff @(posedge i_clk, negedge i_rst_n) begin
-        if(~i_rst_n)       reg_counter <= 5'd26       ;
-        //else if(i_div_clk) reg_counter <= next_counter;
-        else               reg_counter <= next_counter;
+        if(~i_rst_n)       reg_counter <= '0          ;
+        else if(i_div_clk) reg_counter <= next_counter;
+        //else               reg_counter <= next_counter;
     end
 
     logic  count_end;
