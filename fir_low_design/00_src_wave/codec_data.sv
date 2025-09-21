@@ -1,12 +1,16 @@
 module codec_data(
-    input  logic        i_clk        ,  //12MHz - MCLK
+    input  logic        i_clk        ,  //  12MHz - MCLK
     input  logic        i_rst_n      ,
-    input  logic        i_config_done,
-    input  logic [23:0] i_p2s_in     ,
-    output logic        o_bclk       ,
-    output logic        o_daclrck    ,
-    output logic        o_sample_up  ,
-    output logic        o_dac_dat
+    input  logic        i_config_done,  // done kick signal from i2c_config
+    input  logic [23:0] i_p2s_in     ,  // data need DAC
+    output logic [23:0] o_s2p_out    ,  // only left channel
+    
+    output logic        o_bclk       ,  // 2.4MHz ( 40:60 - 0:1)
+    output logic        o_daclrck    ,  //  48kHz ( 50:50 - 0:1) 
+    output logic        o_adclrck    ,  //  48kHz ( 50:50 - 0:1)   
+    output logic        o_sample_tick,  //  48kHz (249: 1 - 0:1) 
+    input  logic        i_adc_dat    ,
+    output logic        o_dac_dat    
 );
 
     typedef enum logic [3:0] {
@@ -35,7 +39,7 @@ module codec_data(
     logic samp_detect;
 
     always_ff @(posedge i_clk, negedge i_rst_n) begin
-        if(~i_rst_n)         reg_data_dac <= '0      ;
+        if(~i_rst_n)          reg_data_dac <= '0      ;
         else if(samp_detect) reg_data_dac <= i_p2s_in;
     end
 
@@ -52,7 +56,7 @@ module codec_data(
         end
     end
 
-    logic  count_done;
+    logic count_done;
     assign count_done = (reg_index == '0);
 
     always_comb begin
@@ -167,8 +171,18 @@ module codec_data(
         endcase
     end
 
-    assign o_dac_dat   = data_trans_dac[reg_index];
-    assign o_sample_up = samp_detect              ;
+    assign o_adclrck     = o_daclrck                ;
+    assign o_dac_dat     = data_trans_dac[reg_index];
+    assign o_sample_tick = samp_detect              ;
+
+    logic [24:0] s2p_adc_shift_reg;
+
+    always_ff @(posedge i_clk, negedge i_rst_n) begin
+        if(~i_rst_n)                        s2p_adc_shift_reg <= '0                                  ;
+        else if(reg_state == LEFT_HOLD_II)  s2p_adc_shift_reg <= {s2p_adc_shift_reg[23:0], i_adc_dat};
+    end
+
+    assign o_s2p_out = s2p_adc_shift_reg[24:1];
 
 endmodule
 

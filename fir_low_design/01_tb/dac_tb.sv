@@ -9,11 +9,13 @@ module dac_tb();
     logic signed [23:0] sine_wave      ;
     logic signed [23:0] noise          ;
     logic signed [23:0] filting_data   ;
+    logic        [23:0] adc_data_s2p   ;
 
     logic               config_done    ;
     logic               bclk           ;
     logic               daclrck        ;
     logic               dac_serial     ;
+    logic               adc_serial     ;
 
     //assign sine_noise = noise;
     assign sine_noise = sine_wave;
@@ -48,9 +50,12 @@ module dac_tb();
         .i_rst_n      (i_rst_n),
         .i_config_done(config_done),
         .i_p2s_in     (sine_noise),
+        .o_s2p_out    (adc_data_s2p),
         .o_bclk       (bclk),
         .o_daclrck    (daclrck),
-        .o_sample_up  (samp_tick),
+        .o_adclrck    (),
+        .o_sample_tick(samp_tick),
+        .i_adc_dat    (adc_serial),
         .o_dac_dat    (dac_serial)   
     );
 
@@ -100,10 +105,17 @@ module dac_tb();
 
     always #5 i_clk = ~i_clk;
 
+    always begin
+        wait(i_rst_n)
+        @(posedge i_clk);
+        adc_serial = $random;
+    end
+
     initial begin 
         i_clk   = '0;
         i_rst_n = '0;
         config_done = '0;
+        adc_serial  = '0;
 
         #20
         i_rst_n = '1;

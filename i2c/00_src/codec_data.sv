@@ -5,13 +5,12 @@ module codec_data(
     input  logic [23:0] i_p2s_in     ,  // data need DAC
     output logic [23:0] o_s2p_out    ,  // only left channel
     
-    output logic        o_bclk       ,  // 2.4MHz (40:60 - 0:1)
-    output logic        o_daclrck    ,  //  48kHz (50:50 - 0:1) 
-    output logic        o_adclrck    ,  //  48kHz (50:50 - 0:1)   
-    output logic        o_sample_tick,  // 
+    output logic        o_bclk       ,  // 2.4MHz ( 40:60 - 0:1)
+    output logic        o_daclrck    ,  //  48kHz ( 50:50 - 0:1) 
+    output logic        o_adclrck    ,  //  48kHz ( 50:50 - 0:1)   
+    output logic        o_sample_tick,  //  48kHz (249: 1 - 0:1) 
     input  logic        i_adc_dat    ,
-    output logic        o_dac_dat    ,
-
+    output logic        o_dac_dat    
 );
 
     typedef enum logic [3:0] {
@@ -183,7 +182,7 @@ module codec_data(
         else if(reg_state == LEFT_HOLD_II)  s2p_adc_shift_reg <= {s2p_adc_shift_reg[23:0], i_adc_dat};
     end
 
-    assign o_s2p_out = s2p_adc_shift_reg[25:1];
+    assign o_s2p_out = s2p_adc_shift_reg[24:1];
 
 endmodule
 
