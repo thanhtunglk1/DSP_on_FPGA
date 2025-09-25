@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Sep 21, 2025 at 14:10:38 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Sep 25, 2025 at 04:09:42 EDT
 xrun
 	+xm64bit
 	-sv
@@ -21,42 +21,6 @@ xrun
    User defined plus("+") options:
 	+ntb_random_seed=automatic
 
-Recompiling... reason: file '../00_src_wave/codec_data.sv' is newer than expected.
-	expected: Sun Sep 21 14:04:20 2025
-	actual:   Sun Sep 21 14:10:22 2025
-file: ../00_src_wave/codec_data.sv
-	module worklib.codec_data:sv
-		errors: 0, warnings: 0
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-	Top level design units:
-		sine_gen
-		wave_rec
-		fir_top
-		dac_tb
-xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-        .i_phase_step('d0), 
-                        |
-xmelab: *W,CUVMPW (../01_tb/dac_tb.sv,44|24): port sizes differ in port connection(32/16) for the instance(dac_tb) .
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.codec_data:sv <0x1c291dd6>
-			streams:  15, words:  9258
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                 Instances  Unique
-		Modules:                13      11
-		Registers:              83      77
-		Scalar wires:           38       -
-		Vectored wires:         48       -
-		Always blocks:          24      22
-		Initial blocks:          7       5
-		Final blocks:            1       1
-		Cont. assignments:      26      24
-		Pseudo assignments:     32      32
-		Simulation timescale:  1ns
-	Writing initial simulation snapshot: worklib.sine_gen:sv
 Loading snapshot worklib.sine_gen:sv .................... Done
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
@@ -67,6 +31,6 @@ xmsim: *W,RMEMNOF: $readmem error: open failed on file "../04_fir_cof/sine_wave.
             Time: 0 FS + 0
 
 Simulation complete via $finish(1) at time 500060 NS + 0
-../01_tb/dac_tb.sv:132         $finish;
+../01_tb/dac_tb.sv:129         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Sep 21, 2025 at 14:10:40 EDT  (total: 00:00:02)
+TOOL:	xrun(64)	20.09-s001: Exiting on Sep 25, 2025 at 04:09:43 EDT  (total: 00:00:01)

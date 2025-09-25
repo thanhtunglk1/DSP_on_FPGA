@@ -4,10 +4,18 @@ module wave_gen #(
 )(
     input  logic                              i_clk             ,
     input  logic                              i_rst_n           ,
-    input  logic        [                2:0] i_sel_wave        ,
-    input  logic        [$clog2(DEPTH) - 1:0] i_wave_phase_step ,
-    input  logic        [                2:0] i_sel_duty_cycle  ,
-    input  logic signed [                3:0] i_gain            ,
+
+    input  logic                              i_add_noise       , // 0 - sóng thuần túy, 1 - sóng + nhiễu
+
+    input  logic        [                2:0] i_sel_wave        , // chọn loại sóng xuất
+    input  logic        [$clog2(DEPTH) - 1:0] i_wave_phase_step , // chỉnh bước nhảy của NCO của sóng - chỉnh tẩn số
+    input  logic        [                2:0] i_sel_duty_cycle  , // chọn duty cycle cho sóng vuông
+    input  logic signed [                3:0] i_gain_wave       , // lựa chọn độ lợi áp khôi phục của sóng
+
+    input  logic                              i_lfsr_sin        , // 0 - lfsr, 1 - hài bậc cao sóng sine
+    input  logic                              i_wave_noise_step , // chỉnh bước nhảy của NCO của nhiểu sin cao - chỉnh tẩn số
+    input  logic signed [                3:0] i_gain_noise      , // lựa chọn độ lợi áp khôi phục của nhiễu
+    
     output logic signed [WIDTH         - 1:0] o_wave_out  
 );
 
@@ -81,6 +89,27 @@ module wave_gen #(
             3'd7: wave_out = 24'h3FFFFF   ;
         endcase
     end
+
+    lfsr #(
+        .LFSR_WIDTH(24)
+    ) white_noise (
+        .i_clk   (i_clk),
+        .i_rst_n (i_rst_n),
+        .i_en    (tick),
+        .i_sel   (i_sel_gain),                   
+        .o_noise (noise)
+    );
+
+    harmony_sin_gen #(
+        .WIDTH(WIDTH)  ,
+        .DEPTH(DEPTH/2)
+    )(
+    input  logic                       .i_clk                (),
+    input  logic                       .i_rst_n              (),
+    input  logic [$clog2(DEPTH) - 1:0] .i_harmony_phase_step (), 
+    input  logic [                1:0] .i_harmony_gain       (), 
+    output logic                       .o_harmony_out        ()  
+    );
 
     assign wave_gain  = wave_out * i_gain;
     assign o_wave_out = wave_gain[WIDTH - 1 + 4:4];

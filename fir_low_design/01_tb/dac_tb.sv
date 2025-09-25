@@ -107,7 +107,7 @@ module dac_tb();
 
     always begin
         wait(i_rst_n)
-        @(posedge i_clk);
+        @(negedge bclk);
         adc_serial = $random;
     end
 
@@ -124,9 +124,6 @@ module dac_tb();
 
         #40 
         config_done = '1;
-
-        
-
         #500000
 
         $finish;

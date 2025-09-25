@@ -1,7 +1,8 @@
 module wave_sine #(
     parameter WIDTH = 24 ,
     parameter DEPTH = 1024,
-    parameter HEX_LINK = "../04_fir_cof/sine_wave.txt"
+    parameter HEX_LINK = "../04_fir_cof/sine_wave.txt",
+    parameter BEHAVIOR = 0
 )(
     input  logic                       i_clk        ,
     //input  logic                       i_rst_n      ,
@@ -16,25 +17,35 @@ module wave_sine #(
     logic [WIDTH     - 1:0] sine_data  , sin_rom_xor;
 
     assign phase_count = i_phase_count[$clog2(DEPTH) - 2] ? phase_down : i_phase_count[DEPTH_LOG - 1:0];
-    assign sin_rom_xor = sine_data ^ {WIDTH{i_phase_count[9]}};
+    assign sin_rom_xor = sine_data  ^ {WIDTH{i_phase_count[9]}}; 
 
-    adder_flex_no_carry #(
-        .WIDTH(DEPTH_LOG)
-    ) mirror_sine (
-        .i_a   ('1),
-        .i_b   (i_phase_count[DEPTH_LOG - 1:0]),
-        .i_cin (1'b1),
-        .o_s   (phase_down)
-    );
-    
-    adder_flex_no_carry #(
-        .WIDTH(DEPTH_LOG)
-    ) two_compiment (
-        .i_a   (sin_rom_xor),
-        .i_b   ({{DEPTH_SUB{1'b0}}, i_phase_count[$clog2(DEPTH) - 1]}),
-        .i_cin (i_phase_count[9]),
-        .o_s   (o_sine_wave)
-    );
+    generate
+        if(BEHAVIOR) begin
+            assign phase_down  = {DEPTH_LOG{1'b1}} - i_phase_count[DEPTH_LOG - 1:0];
+            assign o_sine_wave = sin_rom_xor + {{DEPTH_SUB{1'b0}}, i_phase_count[$clog2(DEPTH) - 1]};
+        end
+        
+        else begin
+
+            adder_flex_no_carry #(
+                .WIDTH(DEPTH_LOG)
+            ) mirror_sine (
+                .i_a   ('1),
+                .i_b   (i_phase_count[DEPTH_LOG - 1:0]),
+                .i_cin (1'b1),
+                .o_s   (phase_down)
+            );
+
+            adder_flex_no_carry #(
+                .WIDTH(DEPTH_LOG)
+            ) two_compiment (
+                .i_a   (sin_rom_xor),
+                .i_b   ({{DEPTH_SUB{1'b0}}, i_phase_count[$clog2(DEPTH) - 1]}),
+                .i_cin (1'b0),
+                .o_s   (o_sine_wave)
+            );
+        end
+    endgenerate
 
     single_port_ram #(
         .DATA_WIDTH (WIDTH), 

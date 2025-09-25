@@ -32,7 +32,7 @@ module config_codec #(
     //assign reg_setup[ 4] = 16'b0000_000__0_1000_0000; //0  Mute Linein                                                 | addr: 0000_000   0| data: 0_1000_0000 
     //assign reg_setup[ 5] = 16'b0000_001__0_1000_0000; //1  Mute Linein                                                 | addr: 0000_001   1| data: 0_1000_0000
     assign reg_setup[ 6] = 16'b0000_100__0_0001_0000; //4  LINEIN selected to ADC, mute MICIN                          | addr: 0000_100   4| data: 0_0001_0000  
-    assign reg_setup[ 7] = 16'b0000_101__0_0000_0000; //5  Disable High-PF ADC, DAC filter and soft mute, clear offset | addr: 0000_101   5| data: 0_0000_0000   
+    assign reg_setup[ 7] = 16'b0000_101__0_0000_0000; //5  Disable: High-PF ADC, DAC filter and soft mute,clear offset | addr: 0000_101   5| data: 0_0000_0000   
     assign reg_setup[ 8] = 16'b0000_111__0_0000_0001; //7  left justified 24bit MSB first                              | addr: 0000_111   7| data: 0_0000_1001 
     assign reg_setup[ 9] = 16'b0001_000__0_0000_0001; //8  USB mode, MCLK = 12Mhz, Fs = 48Khz                          | addr: 0001_000   8| data: 0_0000_0001 
     assign reg_setup[10] = 16'b0001_001__0_0000_0001; //9  active                                                      | addr: 0001_001   9| data: 0_0000_0001   

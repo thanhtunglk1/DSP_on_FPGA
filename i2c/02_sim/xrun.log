@@ -1,5 +1,5 @@
 xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s001: Started on Sep 21, 2025 at 16:28:33 EDT
+TOOL:	xrun(64)	20.09-s001: Started on Sep 25, 2025 at 04:07:22 EDT
 xrun
 	+xm64bit
 	-sv
@@ -15,22 +15,14 @@ xrun
 	+ntb_random_seed=automatic
 
 Recompiling... reason: file '../00_src/config_codec.sv' is newer than expected.
-	expected: Sat Sep 20 23:10:36 2025
-	actual:   Sun Sep 21 16:28:29 2025
-file: ../00_src/config_codec.sv
-	module worklib.config_codec:sv
-		errors: 0, warnings: 0
+	expected: Sun Sep 21 16:28:29 2025
+	actual:   Mon Sep 22 14:35:29 2025
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
 		config_tb
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.i2c_trans:sv <0x5aea5d6b>
-			streams:  11, words:  6479
-		worklib.config_codec:sv <0x4cf4947e>
-			streams:  29, words: 11649
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -54,4 +46,4 @@ xcelium> run
 Simulation complete via $finish(1) at time 135385 NS + 0
 ../01_tb/config_tb.sv:46         $finish;
 xcelium> exit
-TOOL:	xrun(64)	20.09-s001: Exiting on Sep 21, 2025 at 16:28:35 EDT  (total: 00:00:02)
+TOOL:	xrun(64)	20.09-s001: Exiting on Sep 25, 2025 at 04:07:24 EDT  (total: 00:00:02)
