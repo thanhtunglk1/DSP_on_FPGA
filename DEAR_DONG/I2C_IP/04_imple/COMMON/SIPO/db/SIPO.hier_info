@@ -1,0 +1,46 @@
+|SIPO
+i_clk => count[0].CLK
+i_clk => count[1].CLK
+i_clk => count[2].CLK
+i_clk => shift_reg[7][0].CLK
+i_clk => shift_reg[6][0].CLK
+i_clk => shift_reg[5][0].CLK
+i_clk => shift_reg[4][0].CLK
+i_clk => shift_reg[3][0].CLK
+i_clk => shift_reg[2][0].CLK
+i_clk => shift_reg[1][0].CLK
+i_clk => shift_reg[0][0].CLK
+i_rst_n => count[0].ACLR
+i_rst_n => count[1].ACLR
+i_rst_n => count[2].ACLR
+i_rst_n => shift_reg[7][0].ACLR
+i_rst_n => shift_reg[6][0].ACLR
+i_rst_n => shift_reg[5][0].ACLR
+i_rst_n => shift_reg[4][0].ACLR
+i_rst_n => shift_reg[3][0].ACLR
+i_rst_n => shift_reg[2][0].ACLR
+i_rst_n => shift_reg[1][0].ACLR
+i_rst_n => shift_reg[0][0].ACLR
+i_start => shift_reg[0][0].ENA
+i_start => shift_reg[1][0].ENA
+i_start => shift_reg[2][0].ENA
+i_start => shift_reg[3][0].ENA
+i_start => shift_reg[4][0].ENA
+i_start => shift_reg[5][0].ENA
+i_start => shift_reg[6][0].ENA
+i_start => shift_reg[7][0].ENA
+i_start => count[2].ENA
+i_start => count[1].ENA
+i_start => count[0].ENA
+i_data[0] => shift_reg[0][0].DATAIN
+o_data[0] << shift_reg[0][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[1] << shift_reg[1][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[2] << shift_reg[2][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[3] << shift_reg[3][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[4] << shift_reg[4][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[5] << shift_reg[5][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[6] << shift_reg[6][0].DB_MAX_OUTPUT_PORT_TYPE
+o_data[7] << shift_reg[7][0].DB_MAX_OUTPUT_PORT_TYPE
+o_done << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

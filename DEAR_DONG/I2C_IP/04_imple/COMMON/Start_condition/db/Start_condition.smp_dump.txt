@@ -1,0 +1,7 @@
+
+State Machine - |Start_condition|phase
+Name phase.PHY_4 phase.PHY_3 phase.PHY_2 phase.PHY_1 
+phase.PHY_1 0 0 0 0 
+phase.PHY_2 0 0 1 1 
+phase.PHY_3 0 1 0 1 
+phase.PHY_4 1 0 0 1 

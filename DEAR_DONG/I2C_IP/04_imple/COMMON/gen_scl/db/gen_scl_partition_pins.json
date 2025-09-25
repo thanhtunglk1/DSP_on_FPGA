@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_SCL",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TWIBR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_SCL_start",
+					"strict" : false
+				},
+				{
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_SCL_en",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

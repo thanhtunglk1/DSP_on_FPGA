@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Sep 15 01:01:50 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : gen_scl
+Top-level Entity Name : gen_scl
+Family : Cyclone 10 LP
+Device : 10CL080YF780C8G
+Timing Models : Final
+Total logic elements : 32 / 81,264 ( < 1 % )
+    Total combinational functions : 29 / 81,264 ( < 1 % )
+    Dedicated logic registers : 17 / 81,264 ( < 1 % )
+Total registers : 17
+Total pins : 21 / 424 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,810,880 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 488 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
