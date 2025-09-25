@@ -1,0 +1,229 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "s_axis_data_tready",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tvalid",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tlast",
+					"strict" : false
+				},
+				{
+					"name" : "scl_o",
+					"strict" : false
+				},
+				{
+					"name" : "scl_t",
+					"strict" : false
+				},
+				{
+					"name" : "sda_o",
+					"strict" : false
+				},
+				{
+					"name" : "sda_t",
+					"strict" : false
+				},
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_addressed",
+					"strict" : false
+				},
+				{
+					"name" : "bus_active",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tvalid",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "release_bus",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "m_axis_data_tready",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[0]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[1]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[3]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[2]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[6]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[5]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address_mask[4]",
+					"strict" : false
+				},
+				{
+					"name" : "device_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "s_axis_data_tdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "scl_i",
+					"strict" : false
+				},
+				{
+					"name" : "sda_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

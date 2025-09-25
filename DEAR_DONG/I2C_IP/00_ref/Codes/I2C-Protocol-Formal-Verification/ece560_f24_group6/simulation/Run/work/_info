@@ -1,0 +1,118 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.3_1 2021.08, Aug 15 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/u/nivedita/Fourth_term/ece560_f24_group6/simulation/Run
+T_opt
+!s110 1733559777
+Vh3OAC9GWKV4WmBY[N<FTa1
+04 6 4 work i2c_tb fast 0
+=1-525400b63b2a-675405e0-d817c-2306
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.3_1;73
+vi2c_master
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1733559775
+!i10b 1
+!s100 XU;<h4VE3G[9Ob]iQIM3<3
+Ig<[VEMLn31OcO=c^]k29W0
+S1
+R0
+Z3 w1733558981
+8i2c_master.sv
+Fi2c_master.sv
+!i122 0
+L0 1 162
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.3_1;73
+r1
+!s85 0
+31
+Z6 !s108 1733559775.000000
+!s107 i2c_master.sv|
+!s90 -reportprogress|300|i2c_master.sv|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vi2c_slave
+R2
+Z8 !s110 1733559776
+!i10b 1
+!s100 Z@;bJR@GS6cgHb;1d<URh1
+Ia^MA5D@`10jikf[A1J87C3
+S1
+R0
+R3
+8i2c_slave.sv
+Fi2c_slave.sv
+!i122 1
+L0 1 177
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 i2c_slave.sv|
+!s90 -reportprogress|300|i2c_slave.sv|
+!i113 0
+R7
+R1
+vi2c_tb
+R2
+R8
+!i10b 1
+!s100 eZEbz22^DVhK@CoK=RNd63
+IhMUGdhL5bRK:ldLo7GfmZ1
+S1
+R0
+R3
+8tb_top.sv
+Ftb_top.sv
+!i122 3
+L0 1 103
+R4
+R5
+r1
+!s85 0
+31
+Z9 !s108 1733559776.000000
+!s107 tb_top.sv|
+!s90 -reportprogress|300|tb_top.sv|
+!i113 0
+R7
+R1
+vi2c_top
+R2
+R8
+!i10b 1
+!s100 4WBMXAh6O`BA?BTFE[MH61
+IEAW]PA_8E6fT_2BJ?k3Lb2
+S1
+R0
+R3
+8i2c_main.sv
+Fi2c_main.sv
+!i122 2
+L0 1 41
+R4
+R5
+r1
+!s85 0
+31
+R9
+!s107 i2c_main.sv|
+!s90 -reportprogress|300|i2c_main.sv|
+!i113 0
+R7
+R1

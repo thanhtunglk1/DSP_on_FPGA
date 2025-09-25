@@ -1,0 +1,8 @@
+(null).i2c_top#../RTL/i2c_top.sv
+(null).i2c_master#../RTL/i2c_master.sv
+(null).i2c_slave#../RTL/i2c_slave.sv
+(null).i2c_master_assertions#../RTL/i2c_master_assertions.sv
+(null).i2c_slave_assertions#../RTL/i2c_slave_assertions.sv
+(null).i2c_master_assumptions#../RTL/i2c_master_assumptions.sv
+(null).i2c_top_assertions#../RTL/i2c_top_assertions.sv
+(null).i2c_slave_assumptions#../RTL/i2c_slave_assumptions.sv

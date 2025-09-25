@@ -1,0 +1,11 @@
+
+State Machine - |test|state_reg
+Name state_reg.STATE_READ_3 state_reg.STATE_READ_2 state_reg.STATE_READ_1 state_reg.STATE_WRITE_2 state_reg.STATE_WRITE_1 state_reg.STATE_ACK state_reg.STATE_ADDRESS state_reg.STATE_IDLE 
+state_reg.STATE_IDLE 0 0 0 0 0 0 0 0 
+state_reg.STATE_ADDRESS 0 0 0 0 0 0 1 1 
+state_reg.STATE_ACK 0 0 0 0 0 1 0 1 
+state_reg.STATE_WRITE_1 0 0 0 0 1 0 0 1 
+state_reg.STATE_WRITE_2 0 0 0 1 0 0 0 1 
+state_reg.STATE_READ_1 0 0 1 0 0 0 0 1 
+state_reg.STATE_READ_2 0 1 0 0 0 0 0 1 
+state_reg.STATE_READ_3 1 0 0 0 0 0 0 1 

@@ -1,0 +1,31 @@
+2024-12-07 00:18:41:1733559521732 | INFO  | Process Limits
+	 Virual Memory -> 65536 MB
+	 Time Limit -> no limit
+	 Stack Size -> no limit
+	 Data Segment -> no limit
+	 File Size -> no limit
+	 Lock Limit -> no limit
+	 CPU Time Limit -> no limit
+	 RSS  -> no limit
+	 Threads  -> 4096 
+Available Cores : 32
+SystemInfo : totalram=122722 freeram=17082.9 sharedram=0 bufferram=213.016 totalswap=0 freeswap=0 procs= 21172
+
+2024-12-07 00:18:41:1733559521816 | INFO  | Share License key => -2583557767554088629 for master run  Old Key => -2583557767554088629
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: check_cdc cmdPtr: 0x30d3a000
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: check_glitch cmdPtr: 0x30d44000
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: check_hazard cmdPtr: 0x30d44490
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: check_rdc cmdPtr: 0x1711f980
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: finish_distributed_run cmdPtr: 0x30bbe400
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: sync_active_scenarios cmdPtr: 0x317c3540
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: write_abstract_model cmdPtr: 0x316e1000
+2024-12-07 00:18:42:1733559522593 | INFO  | registerSyncPoint: write_constr_abstract_model cmdPtr: 0x30d6c000
+2024-12-07 00:18:42:1733559522593 | INFO  | Trigger point for reading scenarioSpecific/common files: check_rdc
+2024-12-07 00:18:42:1733559522593 | INFO  | Trigger point for reading scenarioSpecific/common files: check_hazard
+2024-12-07 00:18:42:1733559522593 | INFO  | Trigger point for reading scenarioSpecific/common files: check_cdc
+2024-12-07 00:18:42:1733559522593 | INFO  | Trigger point for reading scenarioSpecific/common files: check_glitch
+2024-12-07 00:18:48:1733559528351 | INFO  | restoreDesignForChildModes child: 0  designShare: 0 isDesignReadProcess: 0 designExists:0
+2024-12-07 00:18:48:1733559528352 | INFO  | .. don't restore design
+2024-12-07 00:18:53:1733559533112 | INFO  | saveDesignForChildModes: MM not enabled
+2024-12-07 00:24:31:1733559871550 | INFO  | MultiModeEnabled: 0 dbMerged: 0 Child: 0
+2024-12-07 00:24:31:1733559871621 | INFO  | exitChilds

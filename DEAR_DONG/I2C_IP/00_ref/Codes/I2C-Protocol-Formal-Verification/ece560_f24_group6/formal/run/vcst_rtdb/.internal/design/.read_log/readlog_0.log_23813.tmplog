@@ -1,0 +1,8 @@
+BEGIN_VIOLATION
+RULE_NAME:SM_IGN_IAD
+FILE_NAME:../RTL/i2c_master.sv
+LINE_NUMBER:18
+VCS_SEVERITY:Warning
+MESSAGE:  Initial Assignment at Declaration for &quot;sum&quot; is ignored by synthesis
+END_VIOLATION
+

@@ -1,0 +1,8 @@
+0::i2c_master_assertions::0
+1::i2c_slave_assertions::0
+2::i2c_slave_assumptions::0
+3::i2c_master_assumptions::0
+4::i2c_master::0
+5::i2c_slave::0
+6::i2c_top_assertions::0
+7::i2c_top::0

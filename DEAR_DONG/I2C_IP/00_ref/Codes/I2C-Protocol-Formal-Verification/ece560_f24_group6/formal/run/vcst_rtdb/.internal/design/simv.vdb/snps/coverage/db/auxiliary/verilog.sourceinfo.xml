@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/u/nivedita/Fourth_term/ece560_f24_group6/formal/run"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="V-2023.12-SP2-3"  />
+      <fileinfo name="/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/undef_vcs.v"  id="0"  timestamp="1733559528"  />
+      <fileinfo name="../RTL/i2c_master.sv"  id="1"  timestamp="1733558942"  />
+      <fileinfo name="../RTL/i2c_slave.sv"  id="2"  timestamp="1733558942"  />
+      <fileinfo name="../RTL/i2c_top.sv"  id="3"  timestamp="1733558943"  />
+      <fileinfo name="../RTL/i2c_master_assertions.sv"  id="4"  timestamp="1733558942"  />
+      <fileinfo name="../RTL/i2c_master_assumptions.sv"  id="5"  timestamp="1733558942"  />
+      <fileinfo name="../RTL/i2c_slave_assertions.sv"  id="6"  timestamp="1733558942"  />
+      <fileinfo name="../RTL/i2c_slave_assumptions.sv"  id="7"  timestamp="1733558943"  />
+      <fileinfo name="../RTL/i2c_top_assertions.sv"  id="8"  timestamp="1733558943"  />
+      <fileinfo name="../RTL/i2c_bind.sv"  id="9"  timestamp="1733558942"  />
+    </srcinfo>

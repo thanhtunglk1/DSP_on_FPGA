@@ -1,0 +1,85 @@
+<SVI>
+<SVI_SIMON>
+  <option data="full_hier"/>
+  <option data="vcstaticStabilityMode"/>
+  <option data="circWriteFile=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/i2c_top.scm"/>
+  <option data="outputWorkDir=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design"/>
+  <option data="vsiLogDir=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/logs"/>
+  <option data="noRemoveConstants"/>
+  <option data="2valued"/>
+  <option data="preserveSigs"/>
+  <option data="trackLocations"/>
+  <option data="oneDeep"/>
+  <option data="wholeSignalsInSupport"/>
+  <option data="directIfFull"/>
+  <option data="designAttribute"/>
+  <option data="markRawSigs"/>
+  <option data="noRemoveWriteOnlyLocalsInUnnamedBlocks"/>
+  <option data="nxgAutoGlassBox"/>
+  <option data="exitPostAnalysis"/>
+  <option data="preserveStructWriteInsideLoop=1"/>
+  <option data="storeScopeForSvaInGen"/>
+  <option data="useOrigVhdlGenBracket"/>
+  <option data="highLevelForm=0"/>
+  <option data="ndmerge"/>
+  <option data="inferComplexSyncControls"/>
+  <option data="enablePortConnectAttr"/>
+  <option data="noSkipSimMemModels"/>
+  <option data="contFeedBackToLatch"/>
+  <option data="dumpQualifiedName=1"/>
+  <option data="genPrimHierarchy=2"/>
+  <option data="populateDriveStrength"/>
+  <option data="useDot"/>
+  <option data="treatInitialBlockAsNonSynth=0"/>
+  <option data="top=i2c_top"/>
+  <option data="addInputResolution"/>
+  <option data="disableAEPs"/>
+  <option data="dumpVsiLib"/>
+  <option data="generateDontCares"/>
+  <option data="q"/>
+  <option data="buildTop=1"/>
+  <option data="j=4"/>
+  <option data="alwaysGenLogicForPartialCombCell"/>
+  <option data="inferPrimGateForUDP"/>
+  <option data="memLatchLimit=16"/>
+  <option data="doControlIdentify=1"/>
+  <option data="numWallSeconds=3000"/>
+  <option data="ignoreCoverage"/>
+  <option data="fastScmRead"/>
+  <option data="preserveDBZ"/>
+  <option data="preserveCaseEq=2"/>
+  <option data="loadBasicDbViews"/>
+</SVI_SIMON>
+<SVI_VCS>
+  <option data="hsc=."/>
+  <option data="elab_summary_report_max_inst=5"/>
+  <option data="elab_summary_sam_file=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/reports/elab_summary_sam.rpt"/>
+  <option data="in_design_file=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/inDesign.rpt"/>
+  <option data="top=i2c_top"/>
+  <option data="portCoercionsLog=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/port_coercions.rpt"/>
+</SVI_VCS>
+<SVI_NEW_SVAC>
+  <option data="svacTop=i2c_top"/>
+  <option data="svacStopAtTop=1"/>
+  <option data="vsiFlow=1"/>
+  <option data="svacVacuity=1"/>
+  <option data="svacLatchedVacuity=1"/>
+  <option data="svacOutputXmlIcd=1"/>
+  <option data="removeVcsAutomata=1"/>
+  <option data="svacIcdFileName=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/svac.icd"/>
+  <option data="svacUqsFileName=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/svac.uqs"/>
+  <option data="svacPureLiveness=1"/>
+  <option data="svacImmediateAssert=1"/>
+  <option data="svacWitness=1"/>
+  <option data="svacLatchedWitness=1"/>
+  <option data="svacAllowImmAssertInFuncTask=1"/>
+  <option data="svacUseVhdlGenerateStyle=1"/>
+  <option data="svacEnableDetLiveness=1"/>
+  <option data="svacSvaDecomposeSpecFile=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/svacDecompose.spec"/>
+  <option data="svacSvaDecomposeLogFile=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/svacDecompose.log"/>
+  <option data="svacRewriteAsyncReset=0"/>
+  <option data="svacRepOptCntrThreshold=40"/>
+  <option data="svacUseDfgExpr=1"/>
+  <option data="svacUseLivenessOpt=1"/>
+</SVI_NEW_SVAC>
+</SVI>

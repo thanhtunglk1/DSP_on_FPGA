@@ -1,0 +1,115 @@
+###############################################################
+ # This report contains names of design units along with parameter
+ # values and self instances.
+ # Some parameters may have more than one possible values for that
+ # design unit, values will be unique for instances. It is indicated as
+ # "Multiple Values".
+ # In some cases instance count shown may be less than actual instance
+ # count in the design due to optimizations. It is indicated as
+ # "Optimized".
+###############################################################
+
+
+Design Unit Name: 'i2c_top', (../RTL/i2c_top.sv:1)
+    Parameters (Total 0)
+    Instances (Total: 0)
+=============================================
+
+
+Design Unit Name: 'i2c_master', (../RTL/i2c_master.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        send_addr = 2  (default: 2)
+        get_ack1 = 3  (default: 3)
+        send_data = 4  (default: 4)
+        get_ack2 = 5  (default: 5)
+        read_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.master_dut
+=============================================
+
+
+Design Unit Name: 'i2c_slave', (../RTL/i2c_slave.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        get_addr = 2  (default: 2)
+        send_ack1 = 3  (default: 3)
+        get_data = 4  (default: 4)
+        send_ack2 = 5  (default: 5)
+        send_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.slave_dut
+=============================================
+
+
+Design Unit Name: 'i2c_master_assertions', (../RTL/i2c_master_assertions.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        send_addr = 2  (default: 2)
+        get_ack1 = 3  (default: 3)
+        send_data = 4  (default: 4)
+        get_ack2 = 5  (default: 5)
+        read_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.master_dut.bind1
+=============================================
+
+
+Design Unit Name: 'i2c_slave_assertions', (../RTL/i2c_slave_assertions.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        get_addr = 2  (default: 2)
+        send_ack1 = 3  (default: 3)
+        get_data = 4  (default: 4)
+        send_ack2 = 5  (default: 5)
+        send_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.slave_dut.bind2
+=============================================
+
+
+Design Unit Name: 'i2c_master_assumptions', (../RTL/i2c_master_assumptions.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        send_addr = 2  (default: 2)
+        get_ack1 = 3  (default: 3)
+        send_data = 4  (default: 4)
+        get_ack2 = 5  (default: 5)
+        read_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.master_dut.bind3
+=============================================
+
+
+Design Unit Name: 'i2c_top_assertions', (../RTL/i2c_top_assertions.sv:1)
+    Parameters (Total 0)
+    Instances (Total 1)(Optimized)
+        i2c_top.bind4
+=============================================
+
+
+Design Unit Name: 'i2c_slave_assumptions', (../RTL/i2c_slave_assumptions.sv:1)
+    Parameters (Total 8)
+        idle = 0  (default: 0)
+        start = 1  (default: 1)
+        get_addr = 2  (default: 2)
+        send_ack1 = 3  (default: 3)
+        get_data = 4  (default: 4)
+        send_ack2 = 5  (default: 5)
+        send_data = 6  (default: 6)
+        complete = 7  (default: 7)
+    Instances (Total 1)
+        i2c_top.slave_dut.bind5
+=============================================
+
+

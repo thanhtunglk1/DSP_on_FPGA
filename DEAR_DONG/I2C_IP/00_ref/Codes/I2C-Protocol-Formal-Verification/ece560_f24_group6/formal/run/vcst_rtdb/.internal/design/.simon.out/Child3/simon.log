@@ -1,0 +1,6 @@
+
+Warning-[SM_BNP] Blocking and Non Blocking Assignments in same Process
+../RTL/i2c_slave.sv, 49
+  Found Blocking and Non Blocking Assignments for signals <mem> in the same 
+  process.
+

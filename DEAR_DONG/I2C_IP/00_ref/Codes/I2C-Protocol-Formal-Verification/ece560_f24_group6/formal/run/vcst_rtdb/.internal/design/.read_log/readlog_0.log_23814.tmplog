@@ -1,0 +1,8 @@
+BEGIN_VIOLATION
+RULE_NAME:SM_BNP
+FILE_NAME:../RTL/i2c_slave.sv
+LINE_NUMBER:49
+VCS_SEVERITY:Warning
+MESSAGE:  Found Blocking and Non Blocking Assignments for signals &lt;mem&gt; in the same VCST_RETprocess.
+END_VIOLATION
+

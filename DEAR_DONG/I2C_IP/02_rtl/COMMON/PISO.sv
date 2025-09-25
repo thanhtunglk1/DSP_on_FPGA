@@ -1,0 +1,92 @@
+module PISO #(
+    parameter SIZE_DATA_IN  = 8,
+    parameter SIZE_DATA_OUT = 1
+)(
+    input  logic                     i_clk,
+    input  logic                     i_rst_n,
+    input  logic                     i_start,
+    input  logic [SIZE_DATA_IN-1:0]  i_data,
+    output logic [SIZE_DATA_OUT-1:0] o_data,
+    output logic                     o_valid,
+    output logic                     o_done
+);
+
+    parameter DEPTH      = SIZE_DATA_IN / SIZE_DATA_OUT;
+    parameter SIZE_DEPTH = $clog2(DEPTH);
+
+    // Shift register
+    logic [SIZE_DATA_OUT-1:0] shift_reg [0:DEPTH-1];
+
+    // Counter
+    logic [SIZE_DEPTH-1:0] count, ncount;
+    logic                  w_count, w_count_next, w_update_count;
+
+    assign w_update_count = i_start & (~o_done);
+    assign w_count_next   = w_update_count & w_count;
+    assign ncount         = w_count_next ? count + 1'b1 : '0;
+
+    always_ff @(posedge i_clk or negedge i_rst_n) begin : proc_count
+        if (~i_rst_n) begin
+            count   <= '0;
+            w_count <= 1'b0;
+        end else begin
+            count   <= ncount;
+            w_count <= w_update_count;
+        end
+    end
+
+    // Input data storage
+    logic [SIZE_DATA_IN-1:0] w_idata, w_idata_next;
+    logic w_update_idata;
+
+    assign w_update_idata = i_start & (~w_count_next);
+    assign w_idata        = w_update_idata ? i_data : w_idata_next;
+
+    always_ff @(posedge i_clk or negedge i_rst_n) begin : save_idata
+        if (~i_rst_n) begin
+            w_idata_next <= '0;
+        end else begin
+            w_idata_next <= w_idata;
+        end
+    end
+
+    // Generate shift register slices
+    genvar i;
+    generate
+        for (i = 0; i < DEPTH; i++) begin : gen_block
+            assign shift_reg[i] = w_idata[(i+1)*SIZE_DATA_OUT-1 -: SIZE_DATA_OUT];
+        end
+    endgenerate
+
+    // Output data
+    logic [SIZE_DATA_OUT-1:0] w_output;
+
+    always_ff @(posedge i_clk or negedge i_rst_n) begin : proc_output_data
+        if (~i_rst_n) begin
+            w_output <= '0;
+        end else begin
+            w_output <= shift_reg[count];
+        end
+    end
+
+    assign o_data = o_valid ? w_output : '0;
+
+    // Output valid
+    always_ff @(posedge i_clk or negedge i_rst_n) begin : proc_valid
+        if (~i_rst_n) begin
+            o_valid <= 1'b0;
+        end else begin
+            o_valid <= w_count_next;
+        end
+    end
+
+    // Output done
+    always_ff @(posedge i_clk or negedge i_rst_n) begin : proc_done
+        if (~i_rst_n) begin
+            o_done <= 1'b0;
+        end else begin
+            o_done <= &count;
+        end
+    end
+
+endmodule

@@ -1,0 +1,52 @@
+BEGIN_VIOLATION
+RULE_NAME:XMRE-L
+FILE_NAME:../RTL/i2c_bind.sv
+LINE_NUMBER:35
+VCS_SEVERITY:Lint
+MESSAGE:&quot;data_rn&quot;VCST_RETThe cross-module reference in following instance path cannot be resolved.VCST_RET&apos;ROOT.i2c_top.slave_dut&apos;
+END_VIOLATION
+
+BEGIN_VIOLATION
+RULE_NAME:XMRE-L
+FILE_NAME:../RTL/i2c_bind.sv
+LINE_NUMBER:87
+VCS_SEVERITY:Lint
+MESSAGE:&quot;data_rn&quot;VCST_RETThe cross-module reference in following instance path cannot be resolved.VCST_RET&apos;ROOT.i2c_top.slave_dut&apos;
+END_VIOLATION
+
+BEGIN_VIOLATION
+RULE_NAME:XMRE-L
+FILE_NAME:../RTL/i2c_slave_assumptions.sv
+LINE_NUMBER:24
+VCS_SEVERITY:Lint
+MESSAGE:&quot;data_rd&quot;VCST_RETThe cross-module reference in following instance path cannot be resolved.VCST_RET&apos;ROOT.i2c_top.slave_dut.bind5&apos;
+END_VIOLATION
+
+BEGIN_VIOLATION
+RULE_NAME:SVAC-TAUT-PROPERTY-UQS
+FILE_NAME:../RTL/i2c_top_assertions.sv
+LINE_NUMBER:16
+VCS_SEVERITY:Warning
+MESSAGE:i2c_top_assertions, &quot;a1&quot;VCST_RETProperty is a tautology if it is used as an assertion or an assumption. ThisVCST_RETmight be related to an unqualified sequence. Please try to explicitly VCST_RETqualify the sequence as strong.VCST_RET
+END_VIOLATION
+
+
+BEGIN_VIOLATION
+RULE_NAME:SM_BNP
+FILE_NAME:../RTL/i2c_slave.sv
+LINE_NUMBER:49
+VCS_SEVERITY:Warning
+MESSAGE:  Found Blocking and Non Blocking Assignments for signals &lt;mem&gt; in the same VCST_RETprocess.
+END_VIOLATION
+
+
+BEGIN_VIOLATION
+RULE_NAME:SM_IGN_IAD
+FILE_NAME:../RTL/i2c_master.sv
+LINE_NUMBER:18
+VCS_SEVERITY:Warning
+MESSAGE:  Initial Assignment at Declaration for &quot;sum&quot; is ignored by synthesis
+END_VIOLATION
+
+
+

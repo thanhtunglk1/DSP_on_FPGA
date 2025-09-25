@@ -1,0 +1,240 @@
+0
+64
++define+SYNTHESIS
++warn=noELW_UNBOUND
++warn=noKDB-ELAB-E
++warn=noSM_CCE
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/pkgs/synopsys/current/vc_static/vcs-mx/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mdir=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/csrc
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libvirsim.so /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/liberrorinf.so /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libsnpsmalloc.so /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libvfs.so
+-Mout=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/simv
+-Msaverestoreobj=/pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/pkgs/synopsys/current/vc_static/vcs-mx/include
+-Mxllcflags=
+-XSvacSkipClkRewriteAsyncReset
+-Xmarkh=0x400
+-Xmonet
+-Xpartialdesign
+-Xsampada=0x100
+-Xufe=2steps
+-Xufe=2steps
+-Xufe=parallel:incrdump
+-Xvcstatic_extns=0x100
+-Xvcstatic_extns=0x1000
+-Xvcstatic_extns=0x4
+-Xvcstatic_extns=0x4000
+-Xvcstatic_extns=0x40000
+-Xvcstatic_extns=1
+-Xvd_opts=-logdir,/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/verdi/elabcomLog
+-Xvd_opts=-silent,-ssy,-ssv,-ssz,+disable_message+C00373,
+-Xverdi_elab_opts=-Xprefer_tech_lib
+-Xverdi_elab_opts=-saveLevel
+-cm
+-error=IRRIPS
+-error=noMPD
+-f ../RTL/filelist
+-full64
+-gen_obj
+-kdb=common_elab
+-kdb=incopt
+-libfile_opt
+-o /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/simv
+-picarchive
+-q
+-scm
+-skip_translate_body
+-sverilog
+-timescale=1ns/1ns
+-top
+/pkgs/synopsys/current/vc_static/vcs-mx/linux64/bin/vcs1
+/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/simv
+i2c_top
+/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/i2c_top.xml
+assert
+/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/undef_vcs.v
+../RTL/filelist
+152
+XNLSPATH=/pkgs/synopsys/current/vc_static/verdi/etc/access/nls
+XMODIFIERS=@im=none
+XLOCALEDIR=/pkgs/synopsys/current/vc_static/verdi/etc/access/locale
+XKEYSYMDB=/pkgs/synopsys/current/vc_static/verdi/etc/access/XKeysymDB2.1
+XDG_SESSION_ID=11310
+XDG_RUNTIME_DIR=/run/user/1830
+XDG_CURRENT_DESKTOP=MATE
+WAVE_REDRAW_ALLVC=1
+VTE_VERSION=5204
+VNCDESKTOP=mo.ece.pdx.edu:11 (nivedita)
+VMR_MODE_FLAG=64
+VERDI_VCST_SUPPORT=1
+VERDI_VCST_MASTER=1
+VERDI_VCST_CMD_TIMER=10000
+VERDI_VCSTATIC_UNIFIED_BETA=1
+VERDI_VCSTATIC_BETA=1
+VERDI_TREE_GRIDLINE_STYLE=all
+VERDI_TB_HT=1
+VERDI_SYM_SKIP_ALL_WARN=1
+VERDI_SVTB_BETA=1
+VERDI_SVTB_ALPHA=1
+VERDI_SOCKET_ERROR_IN_LOG=1
+VERDI_SOCKET_CONN_TIMEOUT=2
+VERDI_SHOW_MIN=1
+VERDI_SHELLDB=1
+VERDI_SG_PREFER_TECH_LIB=1
+VERDI_PRELOAD_NIMBUS_FONT=1
+VERDI_ORIGNAL_LD_LIBRARY_PATH=/user/lib64::/pkgs/synopsys/current/vc_static/linux64/vcst/lib/qt:/pkgs/synopsys/current/vc_static/linux64/vcst/lib:/pkgs/synopsys/current/vc_static/verdi:/pkgs/synopsys/current/vc_static/verdi/share/dbWriter/lib/linux64:/pkgs/synopsys/current/vc_static/linux64/vcst/lib/dbWriter:/pkgs/synopsys/current/vc_static/verdi/share/vcst/linux64:/pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib:/pkgs/synopsys/current/vc_static/linux64/vcst/lib/aws:/pkgs/synopsys/current/vc_static/verdi/etc/lib/libstdc++/linux64:/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64
+VERDI_LIB_CELL_OUTER_BOX=1
+VERDI_KDB_REBUILD_INFO=1
+VERDI_HOME=/pkgs/synopsys/current/vc_static/verdi
+VERDI_GENAI_COMM=1
+VERDI_FV_BETA=1
+VERDI_ENABLE_UNIFIED_QT_TOOLTIP=1
+VERDI_DISMSG_IGN_VER=1
+VERDI_DISABLE_AUTO_COLLAPSE_BNR=1
+VERDI_DISABLE_APP_LAUNCHER=1
+VERDI_CERTITUDE_BETA=1
+VDCOV_INVOKE_TIME_OUT=30000
+VDCOV_INVOKE_TIMER=2000
+VDCOV_ENABLE_GLOBALFONT=1
+VC_STATIC_HOME=/pkgs/synopsys/current/vc_static
+VCS_STACK_EXEC=true
+VCS_PYTHON3=/pkgs/synopsys/current/vc_static/vcs-mx/linux64/bin/Python-3.6.1/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_INTERNAL_CONVERTEDLIBS=
+VCS_HOME=/pkgs/synopsys/current/vc_static/vcs-mx
+VCS_EXEC_DONE=1
+VCS_ENABLE_ASLR_SUPPORT=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+VCF_RUN_LICENSE_TIMEOUT=1
+VCF_LD_LIBRARY_PATH_SAVED=/user/lib64::/pkgs/synopsys/current/vc_static/linux64/vcst/lib/qt:/pkgs/synopsys/current/vc_static/linux64/vcst/lib:/pkgs/synopsys/current/vc_static/verdi:/pkgs/synopsys/current/vc_static/verdi/share/dbWriter/lib/linux64:/pkgs/synopsys/current/vc_static/linux64/vcst/lib/dbWriter:/pkgs/synopsys/current/vc_static/verdi/share/vcst/linux64:/pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib:/pkgs/synopsys/current/vc_static/linux64/vcst/lib/aws:/pkgs/synopsys/current/vc_static/verdi/etc/lib/libstdc++/linux64:/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64
+USER_LD_LIBRARY_PATH=/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64:/opt/rh/httpd24/root/usr/lib64
+UNAME=/bin/uname
+TS_TRMIS_DECIDE_RM_RC_ATTR=0
+TRMIS_REVERSE_JUMP_TO_EARLIEST=1
+TOOL_HOME=/pkgs/synopsys/current/vc_static/vcs-mx/linux64
+TFV_FSDB_MIS_RCA_MODE=1
+TFV_FSDB_MIS_BATCH_REMOVE_INTF_RC_HAVING_INTF_MISMATCH=0
+TFV_FSDB_MIS_BATCH_ENABLE_FSDB_GATE=1
+TFV_FSDB_MIS_BATCH_DUMP_TDC=0
+TCL_LIBRARY=/pkgs/synopsys/current/vc_static/verdi/etc/access/tcl86_library
+SYS_INST_DIR=/pkgs/synopsys/current/vc_static/verdi
+SYNOPSYS_SIM_SETUP=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/synopsys_sim.setup
+SYNOPSYS_MEM_ENABLE_SBRK=1
+SVI_ARCH=linux64
+SSH_TTY=/dev/pts/15
+SSH_CONNECTION=10.234.6.192 64963 10.218.207.20 22
+SSH_CLIENT=10.234.6.192 64963 22
+SSH_AUTH_SOCK=/run/user/1830/keyring/ssh
+SPYGLASS_HOME=/pkgs/synopsys/current/vc_static/SG_COMPAT/SPYGLASS_HOME
+SPS_XFONT_PATH=/pkgs/synopsys/current/vc_static/verdi/XFont
+SPS_RGB_PATH=/pkgs/synopsys/current/vc_static/verdi/etc/rgb
+SPS_FONT_PATH=/pkgs/synopsys/current/vc_static/verdi/font
+SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
+SNPS_VC_LINT_LANGCHK_BIN=/pkgs/synopsys/current/vc_static/soc/linux64/bin
+SNPS_VC_FORMAL_DOCS_HTML=/pkgs/synopsys/current/vc_static/doc/vcst/VC_Formal_Docs/HTML_GUI/index.html
+SNPS_VCS_PYTHON3=/pkgs/synopsys/current/vc_static/vcs-mx/linux64/bin/Python-3.6.1/bin/python3
+SNPS_VCS_CLANG_PATH=/pkgs/synopsys/current/vc_static/vcs-mx/linux64/clang
+SNPS_VCST_VERDI_FIRST_MODE=1
+SNPS_VCST_NAVIGATOR_SAVE_RESTORE=1
+SNPS_VCST_LIB_PATH_INTERNAL_=/pkgs/synopsys/current/vc_static/linux64/vcst/lib
+SNPS_VCST_INTERNAL_VERDI_PATH_SAVED=/pkgs/synopsys/current/vc_static/bin:/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/bin:/opt/rh/rh-git227/root/usr/bin:/opt/rh/rh-git218/root/usr/bin:/opt/rh/httpd24/root/usr/bin:/opt/rh/httpd24/root/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/lib64/openmpi/bin:/pkgs/mentor/questa/2021.3_1/questasim/bin:/pkgs/synopsys/current/vc_static/verdi/bin
+SNPS_VCST_INTERNAL_USE_BUNDLE=1
+SNPS_VCST_INTERNAL_SHARE_LIC=1
+SNPS_VCSG_CMDLINE= -gui
+SNPS_VCF_UNIFIED_COV_BETA=1
+SNPS_VCF_SIGNOFF_DASHBOARD_BETA=1
+SNPS_VCF_INTERNAL_TRACE_X=1
+SNPS_VCF_INTERNAL_SEQ_CMPL=1
+SNPS_VCF_INTERNAL_NAV_GOALLIST=1
+SNPS_VCF_INTERNAL_NATIVESHELL=1
+SNPS_VCF_DPV_CPP_DEBUG=1
+SNPS_LP_INTERNAL_READ_DB_ATTRIBUTES=all
+SNPS_INTERNAL_WRITE_ABSTRACT_MODEL_PARENT_DIR=/u/nivedita/Fourth_term/ece560_f24_group6/formal/run
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPS_DISABLE_SIMON_MEM_POOL=1
+SIGNAL_BASE_EXTRACTION=1
+SIGNAL_BASED_BA=0
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SCH_DISABLE_TEST_NAME_DUMP=1
+SCH_ADD_CLKOBJ_TO_RELATION=1
+QUESTA_VERSION=2021.3_1
+QT_PLUGIN_PATH=/pkgs/synopsys/current/vc_static/verdi/platform/LINUXAMD64/lib/Qt/plugins
+QTWEBENGINE_CHROMIUM_FLAGS=--log-level=3
+PKG_CONFIG_PATH=/opt/rh/httpd24/root/usr/lib64/pkgconfig
+PERL5LIB=/opt/rh/rh-git227/root/usr/share/perl5/vendor_perl:/opt/rh/rh-git218/root/usr/share/perl5/vendor_perl
+OVA_UUM=0
+OPENSSL_ia32cap=:~0x20000000
+NPIL1_PATH=/pkgs/synopsys/current/vc_static/verdi/share/NPI/L1/TCL
+NOVAS_WAVE_REDRAW_ALLVC=1
+NOVAS_VERDI_TB_HT=1
+NOVAS_VERDI_SVTB_BETA=1
+NOVAS_VERDI_SVTB_ALPHA=1
+NOVAS_USER_ANNOTATION=1
+NOVAS_TCL_LIBRARY=/pkgs/synopsys/current/vc_static/verdi/etc/access/tcl86_library
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+NOVAS_SIGNAL_BASED_BA=0
+NOVAS_LC_ALL=C
+NOVAS_HOME=/pkgs/synopsys/current/vc_static/verdi
+NOVASHLPPATH=/pkgs/synopsys/current/vc_static/verdi/doc
+MTI_VCO_MODE=64
+MONETSEEQ_HOME=/pkgs/synopsys/current/vc_static
+MG_HOME=/pkgs/synopsys/current/vc_static
+MGLS_LICENSE_FILE=1717@mentor-lic.cecs.pdx.edu
+MAX_FILE_WITHOUT_LRU=1
+MATE_DESKTOP_SESSION_ID=this-is-deprecated
+MASTER_STACKSIZE_LIMIT=104857600
+MALLOC_ARENA_MAX=1
+LIBRARY_PATH=/opt/rh/httpd24/root/usr/lib64
+LEDA_PATH=/pkgs/synopsys/current/vc_static/soc
+LD_NOVERSION=1
+LC_ALL=C
+KRB5CCNAME=FILE:/tmp/krb5cc_1830_fxaspN
+HT_MAX_RECURSION_DEPTH=10
+HECTOR_HOME=/pkgs/synopsys/current/vc_static/hector
+GTK_OVERLAY_SCROLLING=0
+GL_HOME=/pkgs/synopsys/current/vc_static
+FSDB_ENV_SKIP_COPYRIGHT=1
+FSDB_ENV_DISABLE_OLD_FSDB_VER_MSG=on
+FSDB_DISABLE_OVERWRITTEN_WARNING=1
+FSDBMERGE_ALLOW_CLASH=1
+FLAT_ALL_ARRAYS=1
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-bzSkR5fWDW,guid=004dba9df1512fb99da2e53b67540474
+COLORTERM=truecolor
+AST_DUMP=11
+ADDPKG_CONF_ROOT=/pkgs/pkgs
+0
+0
+11
+1733558942 ../RTL/i2c_bind.sv
+1733558943 ../RTL/i2c_top_assertions.sv
+1733558943 ../RTL/i2c_slave_assumptions.sv
+1733558942 ../RTL/i2c_slave_assertions.sv
+1733558942 ../RTL/i2c_master_assumptions.sv
+1733558942 ../RTL/i2c_master_assertions.sv
+1733558943 ../RTL/i2c_top.sv
+1733558942 ../RTL/i2c_slave.sv
+1733558942 ../RTL/i2c_master.sv
+1733559528 /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/undef_vcs.v
+1733558942 ../RTL/filelist
+4
+1728791136 /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libvirsim.so
+1728789274 /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/liberrorinf.so
+1728789213 /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libsnpsmalloc.so
+1728789269 /pkgs/synopsys/current/vc_static/vcs-mx/linux64/lib/libvfs.so
+1733559532 /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/design/simv.daidir
+-1 partitionlib

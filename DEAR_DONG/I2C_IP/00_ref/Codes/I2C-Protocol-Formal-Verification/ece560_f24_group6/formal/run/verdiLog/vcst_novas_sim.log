@@ -1,0 +1,109 @@
+                                   VC Static 
+              Version V-2023.12-SP2-3 for linux64 - Oct 12, 2024
+                    Copyright (c) 2010 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+#source -echo /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/run_fxp.tcl
+# Set formal application mode
+set_fml_appmode FXP 
+# Specify the design top module
+set design i2c_top 
+# Read the design files using a properly formatted filelist
+read_file -top $design -format sverilog -sva -vcs {-f ../RTL/filelist}
+Lint-[XMRE-L] Cross-module reference resolution error
+../RTL/i2c_bind.sv, 35
+"data_rn"
+  The cross-module reference in following instance path cannot be resolved.
+  'ROOT.i2c_top.slave_dut'
+Lint-[XMRE-L] Cross-module reference resolution error
+../RTL/i2c_bind.sv, 87
+"data_rn"
+  The cross-module reference in following instance path cannot be resolved.
+  'ROOT.i2c_top.slave_dut'
+Lint-[XMRE-L] Cross-module reference resolution error
+../RTL/i2c_slave_assumptions.sv, 24
+"data_rd"
+  The cross-module reference in following instance path cannot be resolved.
+  'ROOT.i2c_top.slave_dut.bind5'
+Info: Invoking New SVA Compiler Instrument...
+Info: SVAC-NC Start
+Warning-[SVAC-TAUT-PROPERTY-UQS] Property is a tautology
+../RTL/i2c_top_assertions.sv, 16
+i2c_top_assertions, "a1"
+  Property is a tautology if it is used as an assertion or an assumption. This
+  might be related to an unqualified sequence. Please try to explicitly 
+  qualify the sequence as strong.
+  
+Info: SVAC-NC Finished
+Info: Invoking Simon...
+Info: Simon VCS Start
+Warning-[SM_IGN_IAD] Initial Assignment at Declaration
+../RTL/i2c_master.sv, 18
+  Initial Assignment at Declaration for "sum" is ignored by synthesis
+Warning-[SM_BNP] Blocking and Non Blocking Assignments in same Process
+../RTL/i2c_slave.sv, 49
+  Found Blocking and Non Blocking Assignments for signals <mem> in the same 
+  process.
+=======================================================
+VCS CPU Time(s)     :0.58
+SIMON CPU Time(s)   :0.76
+SIMON Total Time(s) :0.23
+Peak Memory(MB)     :415
+=======================================================
+Info: Simon VCS Finished
+Info: Simon call complete 
+Info: Exiting after Simon Analysis 
+Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)
+[Info] DB_COPT045: Vcs analyzer task has finished.
+[Info] PROP_I_COLLECT: Collecting Source Properties from the view:i2c_top.
+# Gate Counts 
+Number of Flat Instances = 4048
+Number of Operator = 4048
+Number of Libcells = 0
+Number of Black-Box Instances = 0
+Number of FlipFlop BitWise = 143
+Number of Latch Bitwise = 32
+Number of Nand BitWise = 2
+Number of Comb logic = 1092
+# Create clock signal with a period of 100ns
+create_clock clk -period 100
+# Define reset signal as active low
+create_reset rst -sense high
+# Ensure reset simulation runs to a stable state
+sim_run -stable
+[Info] SIM_I_CREATE: Create Simulation Model.
+# Save the reset state for formal analysis
+sim_save_reset
+fxp_generate
+[Info] FXP_GENERATE_STATUS: 2 nox properties with usage assert were generated for out signals
+[Info] FXP_GENERATE_STATUS: 1 injectx_oba properties with usage assume were generated for oba scopes
+[Info] FXP_GENERATE_STATUS: 2 injectx properties with usage assume were generated for undriven signals
+[Info] FXP_GENERATE_STATUS: 4 injectx_reset properties with usage assume were generated for uninit signals
+[Info] FXP_GENERATE_STATUS: 1 injectx_undef properties with usage assume were generated for undef scopes
+[Info] FXP_GENERATE_STATUS: 1 injectx_xassign properties with usage assume were generated for xassign scopes
+1
+#check_fv
+[Info] FORMAL_I_CREATE: Create Formal Model:i2c_top.
+[Info] FORMAL_I_RUN: Starting formal verification for check_fv
+	  Id: 0  Goals: 8  Constraints: 6  Block Mode: false
+[Info] LIC_UNUSED_WORKERS: 8 unused worker(s) based 1 licenses needed to support 4 workers requested.
+	Use 'set_grid_usage' to maximize worker usage and improve performance, if there are sufficient compute resources to support more workers.
+	Each runtime license supports 12 workers.
+[Info] LIC_RT_CHECKOUT: VC Formal run time license checkout. Base:1  FXP:1.
+[Info] TW_INFO_MSG: Starting rewrite (rw1_1) command at 2024-12-07::00:19:02.
+[Info] BITLEVEL_MODEL_STATS: Generated model with 162054 gates, 38 inputs, 2258 registers, 0 initial constraints, 8 constraints.
+[Info] TW_INFO_MSG: Proof rw1_1 gates : 162054 inputs : 38 reg : 2258 initConst : 0 invarConst : 8 .
+[Info] TW_INFO_MSG: Finished rewrite (rw1_1) command in 2 seconds.
+[Info] TW_INFO_MSG: Starting v3 refine (rw1_1) command at 2024-12-07::00:20:07.
+[Info] TW_INFO_MSG: Finished refine (rw1_1) command in 46 seconds.

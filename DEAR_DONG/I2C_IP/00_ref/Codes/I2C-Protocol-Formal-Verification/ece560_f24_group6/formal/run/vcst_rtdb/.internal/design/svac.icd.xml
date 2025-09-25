@@ -1,0 +1,1113 @@
+<ICD>
+  <SystemReset name="" value="" />
+  <Module name="i2c_master_assertions" DesignLang="Verilog" FileName="../RTL/i2c_master_assertions.sv" LineNo="1">
+    <ModuleVariant name="i2c_master_assertions"  CheckerModule="">
+      <Property name="a1" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="35" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a1: assert property(p1);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_1_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_1_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_1_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_1_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_1_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_1_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a2" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="43" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a2: assert property(p2);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_2_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_2_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_2_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_2_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_2_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_2_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a3" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="51" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a3: assert property(p3);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_3_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_3_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_3_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_3_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_3_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_3_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a4" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="59" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a4: assert property(p4);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_4_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_4_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_4_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_4_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_4_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_4_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a5" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="67" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a5: assert property(p5);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="send_ack_start" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="wr" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_5_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_5_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_5_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_5_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_5_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_5_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a6" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="75" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a6: assert property(p6);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="send_ack_start" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="wr" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_6_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_6_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_6_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_6_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_6_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_6_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a7" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="83" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a7: assert property(p7);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_7_states_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_7_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_7_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_7_states" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_7_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_7_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_7_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_7_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a8" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="91" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a8: assert property(p8);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_8_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_8_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_8_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_8_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_8_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_8_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a9" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="99" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a9: assert property(p9);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="sdan" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="send_ack_end" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_9_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_9_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_9_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_9_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_9_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_9_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a10" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="107" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a10: assert property(p10);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="done" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="update" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_10_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_10_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_10_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_10_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_10_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_10_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a11" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="115" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a11: assert property(p11);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_11_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_11_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_11_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_11_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_11_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_11_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a12" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="123" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a12: assert property(p12);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="count" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_12_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_12_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_12_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_12_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_12_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_12_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a13" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="131" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a13: assert property(p13);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="update" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_13_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_13_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_13_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_13_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_13_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_13_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a14" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="139" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a14: assert property(p14);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="update" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_14_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_14_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_14_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_14_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_14_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_14_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a15" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="147" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a15: assert property(p15);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="sdat" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_15_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_15_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_15_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_15_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_15_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_15_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a16" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assertions.sv" LineNo="154" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a16: assert property(p16);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="en" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="sdan" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="wr" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_16_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_16_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_16_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_16_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_16_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_16_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <VariantInstance name="i2c_top.master_dut.bind1" FileName="../RTL/i2c_bind.sv" LineNo="1">
+      </VariantInstance>
+    </ModuleVariant>
+  </Module>
+  <Module name="i2c_master_assumptions" DesignLang="Verilog" FileName="../RTL/i2c_master_assumptions.sv" LineNo="1">
+    <ModuleVariant name="i2c_master_assumptions"  CheckerModule="">
+      <Property name="a1" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assumptions.sv" LineNo="34" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a1: assume property(p1);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="scl" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="sdat" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_17_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_17_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_17_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_17_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_17_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_17_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a2" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assumptions.sv" LineNo="42" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a2: assume property(p2);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="wr" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_18_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_18_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_18_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_18_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_18_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_18_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a3" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_master_assumptions.sv" LineNo="49" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a3: assume property(p3);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="din" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_19_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_19_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_19_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_19_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_19_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_19_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <VariantInstance name="i2c_top.master_dut.bind3" FileName="../RTL/i2c_bind.sv" LineNo="42">
+      </VariantInstance>
+    </ModuleVariant>
+  </Module>
+  <Module name="i2c_slave_assertions" DesignLang="Verilog" FileName="../RTL/i2c_slave_assertions.sv" LineNo="1">
+    <ModuleVariant name="i2c_slave_assertions"  CheckerModule="">
+      <Property name="a1" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="27" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a1: assert property(p1);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="scl" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="sdat" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_20_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_20_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_20_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_20_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_20_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_20_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a2" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="35" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a2: assert property(p2);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="scl" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="sdat" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_21_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_21_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_21_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_21_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_21_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_21_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a3" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="43" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a3: assert property(p3);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="countn" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_22_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_22_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_22_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_22_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_22_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_22_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a4" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="51" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a4: assert property(p4);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="countn" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_23_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_23_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_23_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_23_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_23_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_23_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a5" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="59" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a5: assert property(p5);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="en" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_24_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_24_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_24_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_24_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_24_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_24_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a6" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="67" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a6: assert property(p6);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="en" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_25_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_25_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_25_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_25_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_25_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_25_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a7" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="75" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a7: assert property(p7);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="countn" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_26_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_26_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_26_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_26_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_26_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_26_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a8" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="83" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a8: assert property(p8);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_27_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_27_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_27_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_27_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_27_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_27_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a9" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="91" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a9: assert property(p9);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="countn" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_28_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_28_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_28_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_28_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_28_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_28_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a10" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="99" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a10: assert property(p10);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="countn" PropertySig="1" AntecedentSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_29_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_29_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_29_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_29_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_29_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_29_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a11" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="107" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a11: assert property(p11);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_30_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_30_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_30_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_30_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_30_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_30_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a12" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assertions.sv" LineNo="115" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a12: assert property(p12);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="update" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_31_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_31_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_31_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_31_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_31_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_31_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <VariantInstance name="i2c_top.slave_dut.bind2" FileName="../RTL/i2c_bind.sv" LineNo="23">
+      </VariantInstance>
+    </ModuleVariant>
+  </Module>
+  <Module name="i2c_slave_assumptions" DesignLang="Verilog" FileName="../RTL/i2c_slave_assumptions.sv" LineNo="1">
+    <ModuleVariant name="i2c_slave_assumptions"  CheckerModule="">
+      <Property name="a1" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assumptions.sv" LineNo="27" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a1: assume property(p1);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="data_rd" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="datan" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_32_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_32_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_32_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_32_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_32_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_32_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a2" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assumptions.sv" LineNo="35" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a2: assume property(p2);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="next_state" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_33_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_33_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_33_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_33_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_33_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_33_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <Property name="a3" type="assume" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_slave_assumptions.sv" LineNo="43" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a3: assume property(p3);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="addrn" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="state" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_34_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_34_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_34_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="0" >
+          <EndedSignal signal="_SVAC_34_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_34_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_34_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <VariantInstance name="i2c_top.slave_dut.bind5" FileName="../RTL/i2c_bind.sv" LineNo="75">
+      </VariantInstance>
+    </ModuleVariant>
+  </Module>
+  <Module name="i2c_top_assertions" DesignLang="Verilog" FileName="../RTL/i2c_top_assertions.sv" LineNo="1">
+    <ModuleVariant name="i2c_top_assertions"  CheckerModule="">
+      <Property name="a1" type="assert" kind="concurrent" InFunction="0" HasLocalVars="0" IsUnsupportedLocalVarAssume="0" PropLang="SVA" FileName="../RTL/i2c_top_assertions.sv" LineNo="16" MultiAutomata="1" IsImplication="1">
+        <PropertySource><![CDATA[a1: assert property(p1);
+
+]]></PropertySource>
+        <Clock>
+        <ClockSignal signal="clk" />
+        </Clock>
+        <DisableIff>
+          <DisableIffSignal signal="rst" />
+        </DisableIff>
+        <PropertyLeafs> 
+          <PropertyLeaf signal="clk" ClkEventSig="1" />
+          <PropertyLeaf signal="done" PropertySig="1" AntecedentSig="1" ConsequentSig="1" />
+          <PropertyLeaf signal="update" PropertySig="1" AntecedentSig="1" />
+        </PropertyLeafs> 
+        <RegInitializations> 
+          <RegInitialization signal="_SVAC_35_ended_reg_0" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_35_ended_reg_1" rhs="1'b0" />
+          <RegInitialization signal="_SVAC_35_states" rhs="2'b0" />
+          <RegInitialization signal="_SVAC_35_ended_reg" rhs="1'b0" />
+        </RegInitializations> 
+        <PropertyEncoding type="Deterministic" kind="negativeAlways" IsTautology="1" >
+          <EndedSignal signal="_SVAC_35_ended_reg_0" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="vacuityEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_35_ended_reg_1" />
+        </PropertyEncoding>
+        <PropertyEncoding type="Deterministic" kind="positiveEventually" IsTautology="0" >
+          <EndedSignal signal="_SVAC_35_ended_reg" />
+        </PropertyEncoding>
+      </Property>
+      <VariantInstance name="i2c_top.bind4" FileName="../RTL/i2c_bind.sv" LineNo="63">
+      </VariantInstance>
+    </ModuleVariant>
+  </Module>
+</ICD>

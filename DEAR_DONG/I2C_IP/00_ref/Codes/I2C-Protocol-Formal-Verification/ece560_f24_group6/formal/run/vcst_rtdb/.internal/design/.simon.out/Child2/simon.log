@@ -1,0 +1,5 @@
+
+Warning-[SM_IGN_IAD] Initial Assignment at Declaration
+../RTL/i2c_master.sv, 18
+  Initial Assignment at Declaration for "sum" is ignored by synthesis
+

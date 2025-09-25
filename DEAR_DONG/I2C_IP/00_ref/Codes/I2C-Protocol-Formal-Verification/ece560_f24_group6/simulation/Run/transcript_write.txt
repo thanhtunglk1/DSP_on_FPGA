@@ -1,0 +1,78 @@
+# //  Questa Sim-64
+# //  Version 2021.3_1 linux_x86_64 Aug 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 20:28:40 on Dec 06,2024
+# vlog -reportprogress 300 i2c_master.sv 
+# -- Compiling module i2c_master
+# 
+# Top level modules:
+# 	i2c_master
+# End time: 20:28:40 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 20:28:41 on Dec 06,2024
+# vlog -reportprogress 300 i2c_slave.sv 
+# -- Compiling module i2c_slave
+# 
+# Top level modules:
+# 	i2c_slave
+# End time: 20:28:41 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 20:28:41 on Dec 06,2024
+# vlog -reportprogress 300 i2c_main.sv 
+# -- Compiling module i2c_top
+# 
+# Top level modules:
+# 	i2c_top
+# End time: 20:28:41 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
+# Start time: 20:28:41 on Dec 06,2024
+# vlog -reportprogress 300 tb_top.sv 
+# -- Compiling module i2c_tb
+# 
+# Top level modules:
+# 	i2c_tb
+# End time: 20:28:41 on Dec 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.i2c_tb 
+# Start time: 20:28:41 on Dec 06,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_slave(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "i2c_master(fast)".
+# Loading sv_std.std
+# Loading work.i2c_tb(fast)
+# Loading work.i2c_top(fast)
+# Loading work.i2c_master(fast)
+# Loading work.i2c_slave(fast)
+# ** Warning: (vsim-8315) No condition is true in the unique/priority if/case statement.
+#    Time: 0 ns  Iteration: 2  Process: /i2c_tb/dut/master_dut/#implicit#unique__69 File: i2c_master.sv Line: 69
+# ** Warning: (vsim-8315) No condition is true in the unique/priority if/case statement.
+#    Time: 0 ns  Iteration: 2  Process: /i2c_tb/dut/slave_dut/#implicit#unique__50 File: i2c_slave.sv Line: 50
+# Starting Write Operation...
+# Write Operation Completed. Data written: a5 at address: 12
+# Starting Write Operation with new value...
+# Write Operation Completed. Data written: 5a at address: 34
+# Testing edge case with maximum address...
+# Edge Case Completed. Data write: 00 from address: 7f
+# All test cases completed!
+# ** Note: $finish    : tb_top.sv(101)
+#    Time: 1590 ns  Iteration: 0  Instance: /i2c_tb
+# 1
+# Break in Module i2c_tb at tb_top.sv line 101

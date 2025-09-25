@@ -1,0 +1,56 @@
+Elaborated Name: 'i2c_top'
+Elaborated Name: 'i2c_master'
+        idle = 0
+        start = 1
+        send_addr = 2
+        get_ack1 = 3
+        send_data = 4
+        get_ack2 = 5
+        read_data = 6
+        complete = 7
+Elaborated Name: 'i2c_slave'
+        idle = 0
+        start = 1
+        get_addr = 2
+        send_ack1 = 3
+        get_data = 4
+        send_ack2 = 5
+        send_data = 6
+        complete = 7
+Elaborated Name: 'i2c_master_assertions'
+        idle = 0
+        start = 1
+        send_addr = 2
+        get_ack1 = 3
+        send_data = 4
+        get_ack2 = 5
+        read_data = 6
+        complete = 7
+Elaborated Name: 'i2c_slave_assertions'
+        idle = 0
+        start = 1
+        get_addr = 2
+        send_ack1 = 3
+        get_data = 4
+        send_ack2 = 5
+        send_data = 6
+        complete = 7
+Elaborated Name: 'i2c_master_assumptions'
+        idle = 0
+        start = 1
+        send_addr = 2
+        get_ack1 = 3
+        send_data = 4
+        get_ack2 = 5
+        read_data = 6
+        complete = 7
+Elaborated Name: 'i2c_top_assertions'
+Elaborated Name: 'i2c_slave_assumptions'
+        idle = 0
+        start = 1
+        get_addr = 2
+        send_ack1 = 3
+        get_data = 4
+        send_ack2 = 5
+        send_data = 6
+        complete = 7

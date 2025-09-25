@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Sep 14 17:16:24 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : test
+Top-level Entity Name : test
+Family : Cyclone 10 LP
+Total logic elements : 242
+    Total combinational functions : 222
+    Dedicated logic registers : 91
+Total registers : 91
+Total pins : 65
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

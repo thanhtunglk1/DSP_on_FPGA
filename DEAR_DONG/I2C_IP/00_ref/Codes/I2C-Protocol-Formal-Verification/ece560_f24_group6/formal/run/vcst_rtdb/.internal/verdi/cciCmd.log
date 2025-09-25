@@ -1,0 +1,20 @@
+00:18:42 : gui:mo.ece.pdx.edu:43874
+00:18:42 : ___vcstRenameMan
+00:18:44 : ___vcDumpDefMsgColor
+00:18:44 : ___vcChangeMsgColor msg_color_warn magenta
+00:18:44 : ___vcChangeMsgColor msg_color_info black
+00:18:48 : source -echo /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/run_fxp.tcl
+00:18:55 : get_snips -verdi
+00:18:55 : ___vcDisplayAbstractSrcFromAutoBBox
+00:18:55 : get_blackbox -designs -verdi
+00:18:56 : get_glassbox -verdi
+00:18:56 : get_snips -verdi
+00:18:56 : ___fvWaitAnnotation
+00:18:56 : ___fvSetReuseWave
+00:18:56 : action aaVerdiRestoreClipboard -trigger
+00:18:56 : ___vcstCommandLog {#action aaMonetSwitchTable -table Targets+Constraints -trigger}
+00:18:56 : ___fvSyncSignoffCovParam {action aaMonetSyncSignoffCovParam -effortIndex 0 -trigger}
+00:18:56 : ___fvSavePropDBToStream
+00:18:57 : ___fvReportConstant {/u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/verdi/constant.xml}
+00:19:00 : check_fv
+00:19:01 : ___fvReportGridUsage /u/nivedita/Fourth_term/ece560_f24_group6/formal/run/vcst_rtdb/.internal/verdi/gridUsage.xml0
