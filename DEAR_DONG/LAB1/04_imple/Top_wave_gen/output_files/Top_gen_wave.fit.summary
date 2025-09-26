@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Sep 26 01:04:15 2025
+Fitter Status : Successful - Fri Sep 26 10:00:28 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Top_gen_wave
 Top-level Entity Name : Top_gen_wave
@@ -6,7 +6,7 @@ Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 33 / 41,910 ( < 1 % )
-Total registers : 83
+Total registers : 85
 Total pins : 108 / 499 ( 22 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )

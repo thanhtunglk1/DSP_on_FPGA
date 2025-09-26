@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top_gen_wave
-Fri Sep 26 01:03:47 2025
+Fri Sep 26 09:59:59 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -70,13 +70,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Sep 26 01:03:47 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri Sep 26 09:59:59 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; Top_gen_wave                                    ;
 ; Top-level Entity Name           ; Top_gen_wave                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 83                                              ;
+; Total registers                 ; 85                                              ;
 ; Total pins                      ; 108                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -190,7 +190,8 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -217,7 +218,7 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 43          ;
+; Estimate of Logic utilization (ALMs needed) ; 44          ;
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 63          ;
 ;     -- 7 input functions                    ; 0           ;
@@ -226,16 +227,16 @@ on the Quartus Prime software download page.
 ;     -- 4 input functions                    ; 7           ;
 ;     -- <=3 input functions                  ; 53          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 83          ;
+; Dedicated logic registers                   ; 85          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 108         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 83          ;
-; Total fan-out                               ; 622         ;
-; Average fan-out                             ; 1.72        ;
+; Maximum fan-out                             ; 85          ;
+; Total fan-out                               ; 634         ;
+; Average fan-out                             ; 1.74        ;
 +---------------------------------------------+-------------+
 
 
@@ -244,7 +245,7 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                       ; Entity Name            ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |Top_gen_wave                                         ; 63 (19)             ; 83 (34)                   ; 0                 ; 0          ; 108  ; 0            ; |Top_gen_wave                                                                                                                                             ; Top_gen_wave           ; work         ;
+; |Top_gen_wave                                         ; 63 (19)             ; 85 (36)                   ; 0                 ; 0          ; 108  ; 0            ; |Top_gen_wave                                                                                                                                             ; Top_gen_wave           ; work         ;
 ;    |BTN_detect_edge:BTN_DE_unit_0|                    ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_gen_wave|BTN_detect_edge:BTN_DE_unit_0                                                                                                               ; BTN_detect_edge        ; work         ;
 ;    |BTN_detect_edge:BTN_DE_unit_2|                    ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_gen_wave|BTN_detect_edge:BTN_DE_unit_2                                                                                                               ; BTN_detect_edge        ; work         ;
 ;    |BTN_detect_edge:BTN_DE_unit_3|                    ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_gen_wave|BTN_detect_edge:BTN_DE_unit_3                                                                                                               ; BTN_detect_edge        ; work         ;
@@ -268,8 +269,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                ; Reason for Removal                                                                                                               ;
 +------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-; o_sel_duty_cycle[1]~reg0                                                                                                     ; Stuck at GND due to stuck port data_in                                                                                           ;
-; o_sel_duty_cycle[0]~reg0                                                                                                     ; Stuck at GND due to stuck port data_in                                                                                           ;
 ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_0[0..6]                                  ; Lost fanout                                                                                                                      ;
 ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_1[0..6]                                  ; Lost fanout                                                                                                                      ;
 ; CTR_adjust_phase_noise:CTR_adjust_phase_noise_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_0[0..6]    ; Lost fanout                                                                                                                      ;
@@ -326,7 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|w_mode[0]                                ; Merged with CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_1[1]                               ;
 ; CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_1[6]         ; Merged with CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_1[3] ;
 ; CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_2[2,3]       ; Merged with CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_2[1] ;
-; Total Number of Removed Registers = 123                                                                                      ;                                                                                                                                  ;
+; Total Number of Removed Registers = 121                                                                                      ;                                                                                                                                  ;
 +------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -354,6 +353,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                                                                        ;                                ; CTR_adjust_phase_noise:CTR_adjust_phase_noise_unit|CTR_step_phase:CTR_step_phase_unit|BTN_detect_edge:BTN_DE_unit|w_p_signal ;
 ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_0[6]                               ; Lost Fanouts                   ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|BTN_detect_edge:BTN_DE_unit|o_signal,          ;
 ;                                                                                                                        ;                                ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|BTN_detect_edge:BTN_DE_unit|w_p_signal         ;
+; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|o_gain_wave[1]                                                          ; Stuck at GND                   ; CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_0[0],        ;
+;                                                                                                                        ; due to stuck port clock_enable ; o_hex_3[0]~reg0                                                                                                              ;
 ; CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_1[0]                                 ; Stuck at VCC                   ; o_hex_1[0]~reg0                                                                                                              ;
 ;                                                                                                                        ; due to stuck port data_in      ;                                                                                                                              ;
 ; CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_1[2]                                 ; Stuck at VCC                   ; o_hex_1[2]~reg0                                                                                                              ;
@@ -376,8 +377,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                                                                        ; due to stuck port data_in      ;                                                                                                                              ;
 ; CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit|CTR_step_amp:CTR_step_amp_unit|o_hex_0[6]                                 ; Stuck at VCC                   ; o_hex_0[6]~reg0                                                                                                              ;
 ;                                                                                                                        ; due to stuck port data_in      ;                                                                                                                              ;
-; CTR_adjust_phase_wave:CTR_adjust_phase_wave_unit|CTR_step_phase:CTR_step_phase_unit|CTR_sevenseg:SEG_UNIT|o_hex_0[0]   ; Stuck at VCC                   ; o_hex_3[0]~reg0                                                                                                              ;
-;                                                                                                                        ; due to stuck port data_in      ;                                                                                                                              ;
 ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|CTR_step_amp:CTR_step_amp_unit|o_step[0]                                ; Stuck at VCC                   ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|o_gain_wave[0]                                                                ;
 ;                                                                                                                        ; due to stuck port clock_enable ;                                                                                                                              ;
 ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|BTN_detect_edge:BTN_DE_unit|o_signal                                    ; Lost Fanouts                   ; CTR_adjust_amp_noise:CTR_adjust_amp_noise_unit|BTN_detect_edge:BTN_DE_unit|w_p_signal                                        ;
@@ -390,12 +389,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 83    ;
+; Total registers                              ; 85    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 83    ;
+; Number of registers using Asynchronous Clear ; 85    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 66    ;
+; Number of registers using Clock Enable       ; 69    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -405,7 +404,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                    ; Fan out ;
 +----------------------------------------------------------------------------------------------------------------------+---------+
-; o_sel_duty_cycle[2]~reg0                                                                                             ; 3       ;
+; o_sel_duty_cycle[2]~reg0                                                                                             ; 2       ;
 ; CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit|o_gain_wave[2]                                                          ; 3       ;
 ; o_hex_0[4]~reg0                                                                                                      ; 1       ;
 ; o_hex_0[5]~reg0                                                                                                      ; 1       ;
@@ -698,9 +697,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 83                          ;
-;     CLR               ; 17                          ;
-;     ENA CLR           ; 66                          ;
+; arriav_ff             ; 85                          ;
+;     CLR               ; 16                          ;
+;     ENA CLR           ; 69                          ;
 ; arriav_lcell_comb     ; 97                          ;
 ;     arith             ; 19                          ;
 ;         1 data inputs ; 1                           ;
@@ -709,8 +708,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 6                           ;
 ;     normal            ; 78                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 55                          ;
-;         2 data inputs ; 9                           ;
+;         1 data inputs ; 56                          ;
+;         2 data inputs ; 8                           ;
 ;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 2                           ;
@@ -718,7 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 108                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.80                        ;
-; Average LUT depth     ; 1.15                        ;
+; Average LUT depth     ; 1.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -737,7 +736,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri Sep 26 01:03:41 2025
+    Info: Processing started: Fri Sep 26 09:59:53 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top_gen_wave -c Top_gen_wave
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -777,8 +776,6 @@ Info (12127): Elaborating entity "Top_gen_wave" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at Top_gen_wave.sv(115): object "w_en_noise" assigned a value but never read File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 115
 Warning (10036): Verilog HDL or VHDL warning at Top_gen_wave.sv(201): object "w_en_add_nose" assigned a value but never read File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 201
 Warning (10858): Verilog HDL warning at Top_gen_wave.sv(200): object w_en_add_noise used but never assigned File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 200
-Warning (10858): Verilog HDL warning at Top_gen_wave.sv(222): object w_sel_duty_cycle used but never assigned File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 222
-Warning (10030): Net "w_sel_duty_cycle" at Top_gen_wave.sv(222) has no driver or initial value, using a default initial value '0' File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 222
 Warning (10030): Net "w_en_add_noise" at Top_gen_wave.sv(200) has no driver or initial value, using a default initial value '0' File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 200
 Warning (10034): Output port "o_ledr[9..8]" at Top_gen_wave.sv(29) has no driver File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
 Info (12128): Elaborating entity "CTR_adjust_amp_wave" for hierarchy "CTR_adjust_amp_wave:CTR_adjust_amp_wave_unit" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 88
@@ -808,8 +805,6 @@ Warning (12011): Net is missing source, defaulting to GND
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_add_noise" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 18
-    Warning (13410): Pin "o_sel_duty_cycle[0]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 226
-    Warning (13410): Pin "o_sel_duty_cycle[1]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 226
     Warning (13410): Pin "o_phase_step_wave[9]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 23
     Warning (13410): Pin "o_lfsr_sin" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 25
     Warning (13410): Pin "o_phase_step_noise[0]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 26
@@ -828,39 +823,34 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_gain_noise[3]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 27
     Warning (13410): Pin "o_ledr[0]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
     Warning (13410): Pin "o_ledr[1]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
-    Warning (13410): Pin "o_ledr[2]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
-    Warning (13410): Pin "o_ledr[3]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
     Warning (13410): Pin "o_ledr[8]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
     Warning (13410): Pin "o_ledr[9]" is stuck at GND File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 29
-    Warning (13410): Pin "o_hex_0[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_0[1]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_0[2]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_0[3]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_0[6]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[2]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[3]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[4]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[5]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_1[6]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
-    Warning (13410): Pin "o_hex_3[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 259
+    Warning (13410): Pin "o_hex_0[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_0[1]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_0[2]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_0[3]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_0[6]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[2]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[3]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[4]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[5]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_1[6]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
+    Warning (13410): Pin "o_hex_3[0]" is stuck at VCC File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 260
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 46 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_clk_top" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 13
     Warning (15610): No output dependent on input pin "i_sw[0]" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 16
-    Warning (15610): No output dependent on input pin "i_sw[1]" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 16
-    Warning (15610): No output dependent on input pin "i_sw[2]" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 16
-    Warning (15610): No output dependent on input pin "i_sw[3]" File: /home/noname/Documents/project_tiny/DSP_on_FPGA/DEAR_DONG/LAB1/02_rtl/TOP_MODULE/Top_gen_wave.sv Line: 16
-Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 203 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 92 output pins
-    Info (21061): Implemented 93 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Fri Sep 26 01:03:47 2025
+    Info (21061): Implemented 95 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Fri Sep 26 09:59:59 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 

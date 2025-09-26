@@ -16,6 +16,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_sel_duty_cycle[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_sel_duty_cycle[1]",
+					"strict" : false
+				},
+				{
 					"name" : "o_sel_duty_cycle[2]",
 					"strict" : false
 				},
@@ -69,6 +77,14 @@
 				},
 				{
 					"name" : "o_phase_step_wave[8]",
+					"strict" : false
+				},
+				{
+					"name" : "o_ledr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_ledr[3]",
 					"strict" : false
 				},
 				{
@@ -241,6 +257,18 @@
 				},
 				{
 					"name" : "i_sw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_sw[3]",
 					"strict" : false
 				},
 				{

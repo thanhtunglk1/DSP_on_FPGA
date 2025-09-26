@@ -10,7 +10,6 @@ module Top_gen_wave #(
     parameter NUM_DUTY_CYCLE = 3 ,
     parameter SIZE_GAIN_WAVE = 3
 )(
-    input logic                             i_clk_top,
     input logic                             i_clk,
     input logic [SIZE_BTN-1:0]              i_btn,
     input logic [SIZE_SW-1:0]               i_sw,
@@ -59,6 +58,7 @@ parameter SIN_NOISE = 3'b111;
 
 logic i_rst_n;
 assign i_rst_n = i_sw[9];
+assign o_ledr[9] = i_sw[9];
 logic signed [SIZE_GAIN_WAVE:0]  w_gain;
 
 //////////////////////////////////////////////////////////
@@ -220,6 +220,7 @@ assign o_ledr[7:5] = o_sel_wave;
 
 //- Duty Cycle
 logic [NUM_DUTY_CYCLE-1:0] w_sel_duty_cycle;
+assign w_sel_duty_cycle = i_sw[3:1];
 always_ff @( posedge i_clk or negedge i_rst_n ) begin 
     if(~i_rst_n)
         o_sel_duty_cycle <= 3'd4;
