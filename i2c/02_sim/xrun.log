@@ -1,0 +1,49 @@
+xrun(64): 20.09-s001: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s001: Started on Sep 25, 2025 at 04:07:22 EDT
+xrun
+	+xm64bit
+	-sv
+	-f ../02_sim/flist.f
+		../00_src/config_codec.sv
+		../00_src/i2c_trans.sv
+		../01_tb/config_tb.sv
+	-timescale 1ns/1ns
+	+ntb_random_seed=automatic
+	+access+rcw
+
+   User defined plus("+") options:
+	+ntb_random_seed=automatic
+
+Recompiling... reason: file '../00_src/config_codec.sv' is newer than expected.
+	expected: Sun Sep 21 16:28:29 2025
+	actual:   Mon Sep 22 14:35:29 2025
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		config_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              29      29
+		Scalar wires:           19       -
+		Vectored wires:         15       -
+		Always blocks:          11      11
+		Initial blocks:          2       2
+		Parallel blocks:         1       1
+		Cont. assignments:      19      19
+		Pseudo assignments:     11      11
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.config_tb:sv
+Loading snapshot worklib.config_tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+[TESTBENCH DONE]
+Simulation complete via $finish(1) at time 135385 NS + 0
+../01_tb/config_tb.sv:46         $finish;
+xcelium> exit
+TOOL:	xrun(64)	20.09-s001: Exiting on Sep 25, 2025 at 04:07:24 EDT  (total: 00:00:02)

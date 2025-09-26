@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Sep 26 09:59:59 2025
+Analysis & Synthesis Status : Successful - Sat Sep 27 00:36:28 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Top_gen_wave
 Top-level Entity Name : Top_gen_wave
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 85
-Total pins : 108
+Total registers : 134
+Total pins : 107
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

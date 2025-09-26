@@ -26,7 +26,7 @@ BTN_detect_edge BTN_DE_unit (
 logic w_en;
 assign w_en = w_btn & i_en;
 
-logic signed [SIZE_VALUE-1:0] w_step;
+logic signed [SIZE_VALUE:0] w_step;
 CTR_step_phase #(
     .SIZE_VALUE (SIZE_VALUE),
     .SIZE_SEG   (SIZE_SEG  )

@@ -6,7 +6,7 @@ module CTR_step_phase #(
     input logic                         i_rst_n ,
     input logic                         i_en    ,
     input logic                         i_btn   ,
-    output logic signed [SIZE_VALUE-1:0] o_step  ,
+    output logic signed [SIZE_VALUE:0]  o_step  ,
     output logic [SIZE_SEG-1:0]          o_hex_0 , // sign
     output logic [SIZE_SEG-1:0]          o_hex_1 , // Value0
     output logic [SIZE_SEG-1:0]          o_hex_2   // value1
@@ -21,7 +21,7 @@ BTN_detect_edge BTN_DE_unit (
     .o_signal    (w_btn) 
 );
 
-parameter NUM_STEP      = 3;
+localparam NUM_STEP      = 3;
 logic [NUM_STEP-1:0] w_mode;
 logic [NUM_STEP-1:0] w_next_mode;
 logic w_en;
@@ -44,15 +44,15 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin : increase_mode
 end
 always_comb begin : process_o_step
     case(w_mode)
-        3'b000:  o_step = -1;
-        3'b001:  o_step = 1;
-        3'b010:  o_step = -4;
-        3'b011:  o_step = 4;
-        3'b100:  o_step = -16;
-        3'b101:  o_step = 16;
-        3'b110:  o_step = -64;
-        3'b111:  o_step = 64;
-        default: o_step = 1;
+        3'b000:  o_step = -7'sd1;
+        3'b001:  o_step =  7'sd1;
+        3'b010:  o_step = -7'sd4;
+        3'b011:  o_step =  7'sd4;
+        3'b100:  o_step = -7'sd16;
+        3'b101:  o_step =  7'sd16;
+        3'b110:  o_step = -7'sd64;
+        3'b111:  o_step =  7'sd64;
+        default: o_step = 7'sd1;
     endcase
 end
 

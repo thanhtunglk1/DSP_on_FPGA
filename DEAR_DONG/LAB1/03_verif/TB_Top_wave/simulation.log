@@ -1,0 +1,9 @@
+----- Test 1: Mode waveform, mode wave -----
+----- Test 2: Mode noise, mode wave -----
+----- Test 3: Mode waveform with noise, mode wave -----
+----- Test 4: Mode Noise, mode wave -----
+End of Test
+- TB_Top_wave/tb_Top_gen_wave.sv:209: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.024 2024-04-05
+- Verilator: $finish at 9ns; walltime 0.001 s; speed 0.000 s/s
+- Verilator: cpu 0.000 s on 1 threads; alloced 57 MB

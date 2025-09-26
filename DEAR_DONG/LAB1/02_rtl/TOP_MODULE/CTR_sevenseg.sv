@@ -11,8 +11,8 @@ module CTR_sevenseg #(
     output logic [NUM_SEG-1:0]          o_hex_2   // value1
 );
 
-parameter SIGN_POS = 7'b1111111;
-parameter SIGN_NEG = 7'b1111101;
+localparam SIGN_POS = 7'b1111111;
+localparam SIGN_NEG = 7'b1111101;
 
 logic [3:0] bin_1, bin_2;
 logic [NUM_SEG-1:0] seg_0, seg_1, seg_2;

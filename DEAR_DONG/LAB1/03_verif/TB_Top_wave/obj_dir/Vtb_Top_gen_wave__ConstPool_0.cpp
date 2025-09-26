@@ -1,0 +1,26 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Constant pool
+//
+
+#include "verilated.h"
+
+extern const VlUnpacked<CData/*3:0*/, 8> Vtb_Top_gen_wave__ConstPool__TABLE_h03d717b3_0 = {{
+    0x01U, 0x01U, 0x04U, 0x04U, 0x04U, 0x06U, 0x04U, 0x04U
+}};
+
+extern const VlUnpacked<CData/*3:0*/, 8> Vtb_Top_gen_wave__ConstPool__TABLE_h27e49da7_0 = {{
+    0x0fU, 0x0fU, 0x0fU, 0x0fU, 0x00U, 0x01U, 0x06U, 0x06U
+}};
+
+extern const VlUnpacked<CData/*6:0*/, 8> Vtb_Top_gen_wave__ConstPool__TABLE_h5a7f7c5f_0 = {{
+    0x7fU, 0x01U, 0x7cU, 0x04U, 0x70U, 0x10U, 0x40U, 0x40U
+}};
+
+extern const VlUnpacked<CData/*6:0*/, 8> Vtb_Top_gen_wave__ConstPool__TABLE_h862118a6_0 = {{
+    0x7dU, 0x7fU, 0x7dU, 0x7fU, 0x7dU, 0x7fU, 0x7dU, 0x7fU
+}};
+
+extern const VlUnpacked<CData/*6:0*/, 16> Vtb_Top_gen_wave__ConstPool__TABLE_h91655a8e_0 = {{
+    0x01U, 0x4fU, 0x12U, 0x06U, 0x4cU, 0x24U, 0x20U, 0x0fU,
+    0x00U, 0x04U, 0x7fU, 0x7fU, 0x7fU, 0x7fU, 0x7fU, 0x7fU
+}};

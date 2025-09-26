@@ -39,13 +39,13 @@ module Top_gen_wave #(
 // Internal Signal
 //////////////////////////////////////////////////////////
 //- MODE WAVE SELECT
-parameter SIN       = 3'b000;
-parameter SQUARE    = 3'b001;
-parameter TRIANGLE  = 3'b010;
-parameter SAWTOOTH  = 3'b011;
-parameter ECG       = 3'b100;
-parameter LFSR_NOISE= 3'b110;
-parameter SIN_NOISE = 3'b111;
+// parameter SIN       = 3'b000;
+// parameter SQUARE    = 3'b001;
+// parameter TRIANGLE  = 3'b010;
+// parameter SAWTOOTH  = 3'b011;
+// parameter ECG       = 3'b100;
+// parameter LFSR_NOISE= 3'b110;
+// parameter SIN_NOISE = 3'b111;
 //- Select duty cycle
 // parameter DUTY_CYCLE_10 = 3'd0;
 // parameter DUTY_CYCLE_20 = 3'd1;
@@ -111,7 +111,7 @@ CTR_adjust_phase_wave #(
 assign o_phase_step_wave = w_phase_wave;
 
 //--| Noise
-logic w_en_nosie;
+logic w_en_noise;
 assign w_en_noise = (~i_sw[8]) & (i_sw[7]);
 logic signed [SIZE_GAIN_WAVE:0]   w_gain_noise;
 logic [SIZE_SEG-1:0]              w_noise_hex_0;
@@ -126,7 +126,7 @@ CTR_adjust_amp_noise #(
     .i_rst_n(i_rst_n),
     .i_btn_0(i_btn[0]),    // Select adjust size
     .i_btn_1(i_btn[2]),    // Adjust amplitude
-    .i_en(w_en_nosie),       // Mode= Wave/Noise
+    .i_en(w_en_noise),       // Mode= Wave/Noise
     .o_gain_wave(w_gain_noise),
     .o_hex_0(w_noise_hex_0), // sign
     .o_hex_1(w_noise_hex_1), // GiaTriTang
@@ -145,7 +145,7 @@ CTR_adjust_phase_noise #(
 ) CTR_adjust_phase_noise_unit (
     .i_clk(i_clk),
     .i_rst_n (i_rst_n),
-    .i_en(w_en_nosie),       // Mode= Wave/Noise
+    .i_en(w_en_noise),       // Mode= Wave/Noise
     .i_btn_0(i_btn[0]),    // Select adjust size
     .i_btn_1(i_btn[3]),    // Adjust frequency
 
@@ -198,7 +198,7 @@ BTN_detect_edge BTN_DE_unit_3 (
 assign o_ledg[3] = w_btn_3;
 
 logic w_en_add_noise;
-assign w_en_add_nose = (i_sw[8]) & (~i_sw[7]) & w_btn_1;
+assign w_en_add_noise = (i_sw[8]) & (~i_sw[7]) & w_btn_1;
 always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_enable_add_nosie
     if(~i_rst_n)
         o_add_noise <= 1'b0;
@@ -242,7 +242,7 @@ end
 always_ff @(posedge i_clk or negedge i_rst_n) begin 
     if(~i_rst_n)
         o_lfsr_sin <= 1'b0;
-    else if(w_btn_1 & w_en_nosie)
+    else if(w_btn_1 & w_en_noise)
         o_lfsr_sin <= w_lfsr_sin;
 end
 assign o_ledr[1] = o_lfsr_sin;
@@ -264,7 +264,7 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin : proc_seg_led
             o_hex_3     <= w_wave_hex_3;
             o_hex_4     <= w_wave_hex_4;
             o_hex_5     <= w_wave_hex_5;
-        end else if(w_en_nosie) begin
+        end else if(w_en_noise) begin
             o_hex_0     <= w_noise_hex_0;
             o_hex_1     <= w_noise_hex_1;
             o_hex_2     <= w_noise_hex_2;

@@ -49,6 +49,16 @@ always_ff @( posedge i_clk or negedge i_rst_n ) begin
         o_gain_wave <= w_next_gain;
 end
 
-
+logic [6:0] w_hex_2;
+seven_seg_anode_common SEVEN_SEG_Unit (
+    .bin (o_gain_wave[NUM_GAIN_STEP-1:0]),
+    .seg (w_hex_2)
+);
+always_ff @( posedge i_clk or negedge i_rst_n ) begin 
+    if(~i_rst_n) 
+        o_hex_2 <= 7'b1111111; // NONE
+    else 
+        o_hex_2 <= w_hex_2;
+end
 
 endmodule
